@@ -2,35 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pause Menu</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paused</title>
+  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <div class="phone-mockup">
     <div class="phone-screen">
       <div class="notch"></div>
+      <div class="background-pattern"></div>
       <div class="screen-content">
-        <div class="bg">
-          <div class="pattern"></div>
-          
-<div class="header">
-  <div class="badge"><span class="material-icons">pause</span> Paused</div>
-  <div class="spacer"></div>
-  <div class="badge"><span class="material-icons">schedule</span> 04:12</div>
-</div>
-<div class="menu">
-  <div class="menu-item primary"><span class="material-icons">play_arrow</span> RESUME</div>
-  <div class="menu-item"><span class="material-icons">replay</span> RESTART LEVEL</div>
-  <div class="menu-item"><span class="material-icons">settings</span> SETTINGS</div>
-  <div class="menu-item"><span class="material-icons">home</span> QUIT TO MENU</div>
-</div>
-
+        <div class="header">
+          <div class="title-lg">Paused</div>
+          <div class="subtitle">Take a breather — time is frozen</div>
         </div>
+        
+    <div class="content centered">
+      <div class="vstack" style="width:80%;">
+        <div class="btn primary"><span class="material-icons">play_arrow</span> Resume</div>
+        <div class="btn"><span class="material-icons">replay</span> Restart from Checkpoint</div>
+        <div class="btn"><span class="material-icons">settings</span> Settings</div>
+        <div class="btn"><span class="material-icons">exit_to_app</span> Quit to Hub</div>
+      </div>
+    </div>
+    
       </div>
     </div>
   </div>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ui:UXML xmlns:ui="UnityEngine.UIElements">
-  <ui:VisualElement class="constellation-screen layout-column">
-    <ui:VisualElement class="constellation-background" />
-    <ui:VisualElement class="constellation-frame layout-column level-screen">
-      <ui:Label class="constellation-title" text="Select a Destination" />
+  <ui:VisualElement class="cosmicelements-screen layout-column">
+    <ui:VisualElement class="cosmicelements-background" />
+    <ui:VisualElement class="cosmicelements-frame layout-column level-screen">
+      <ui:Label class="cosmicelements-title" text="Select a Destination" />
       <ui:VisualElement class="level-select-grid">
         <ui:ListView name="level-list" class="level-list" selection-type="Single" virtualization-method="DynamicHeight" />
         <ui:VisualElement class="level-preview layout-column">

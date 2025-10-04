@@ -1,24 +1,24 @@
 using Creativefusion.Ui.Screens.Screens;
-using Creativefusion.Ui.Styles.Constellation.Internal;
+using Creativefusion.Ui.Styles.CosmicElements.Internal;
 
-namespace Creativefusion.Ui.Styles.Constellation.Screens
+namespace Creativefusion.Ui.Styles.CosmicElements.Screens
 {
     /// <summary>
-    /// Constellation-themed implementation of the <see cref="StartScreen"/> visuals.
+    /// CosmicElements-themed implementation of the <see cref="StartScreen"/> visuals.
     /// </summary>
-    public sealed class ConstellationStartScreen : StartScreen
+    public sealed class CosmicElementsStartScreen : StartScreen
     {
         private static readonly string[] StylePaths =
         {
-            ConstellationResourcePaths.Style("base"),
-            ConstellationResourcePaths.Style("forms"),
-            ConstellationResourcePaths.Style("start")
+            CosmicElementsResourcePaths.Style("base"),
+            CosmicElementsResourcePaths.Style("forms"),
+            CosmicElementsResourcePaths.Style("start")
         };
 
         /// <inheritdoc />
         protected override void OnInitialize()
         {
-            ConstellationScreenUtility.ApplyLayout(this, ConstellationResourcePaths.Layout("Start"), StylePaths);
+            CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("Start"), StylePaths);
             base.OnInitialize();
         }
     }

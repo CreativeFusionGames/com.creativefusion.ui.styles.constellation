@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6faa0178cd9c4b37a8c07398ab51c524, type: 3}
-  m_Name: ConstellationUIScreenConfigSet
+  m_Name: CosmicElementsUIScreenConfigSet
   m_EditorClassIdentifier: 
   _screens:
   - _screenId: main-menu
-    _screenTypeName: Creativefusion.Ui.Styles.Constellation.Screens.ConstellationMainMenuScreen, Creativefusion.Ui.Styles.Constellation
+    _screenTypeName: Creativefusion.Ui.Styles.CosmicElements.Screens.CosmicElementsMainMenuScreen, Creativefusion.Ui.Styles.CosmicElements
     _cacheInstance: 1
   - _screenId: start
-    _screenTypeName: Creativefusion.Ui.Styles.Constellation.Screens.ConstellationStartScreen, Creativefusion.Ui.Styles.Constellation
+    _screenTypeName: Creativefusion.Ui.Styles.CosmicElements.Screens.CosmicElementsStartScreen, Creativefusion.Ui.Styles.CosmicElements
     _cacheInstance: 1
   - _screenId: level-select
-    _screenTypeName: Creativefusion.Ui.Styles.Constellation.Screens.ConstellationLevelSelectScreen, Creativefusion.Ui.Styles.Constellation
+    _screenTypeName: Creativefusion.Ui.Styles.CosmicElements.Screens.CosmicElementsLevelSelectScreen, Creativefusion.Ui.Styles.CosmicElements
     _cacheInstance: 1
   - _screenId: shop
-    _screenTypeName: Creativefusion.Ui.Styles.Constellation.Screens.ConstellationShopScreen, Creativefusion.Ui.Styles.Constellation
+    _screenTypeName: Creativefusion.Ui.Styles.CosmicElements.Screens.CosmicElementsShopScreen, Creativefusion.Ui.Styles.CosmicElements
     _cacheInstance: 1

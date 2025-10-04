@@ -1,7 +1,7 @@
-.constellation-frame .constellation-input {
+.cosmicelements-frame .cosmicelements-input {
     max-width: 360px;
 }
 
-.constellation-frame .form-button-row {
+.cosmicelements-frame .form-button-row {
     justify-content: flex-end;
 }

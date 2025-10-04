@@ -1,5 +1,5 @@
 {
-  "name": "Creativefusion.Ui.Styles.Constellation",
+  "name": "Creativefusion.Ui.Styles.CosmicElements",
   "references": [
     "UnityEngine.CoreModule",
     "UnityEngine.UIElementsModule",

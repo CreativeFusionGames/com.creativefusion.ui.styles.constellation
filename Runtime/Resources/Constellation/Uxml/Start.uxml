@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ui:UXML xmlns:ui="UnityEngine.UIElements">
-  <ui:VisualElement class="constellation-screen layout-column">
-    <ui:VisualElement class="constellation-background" />
-    <ui:VisualElement class="constellation-frame layout-column start-screen">
-      <ui:Label class="constellation-title" text="Welcome, Captain" />
-      <ui:Label class="constellation-subtitle" text="Prepare your profile before launch" />
-      <ui:TextField name="player-name-field" class="constellation-input" label="Callsign" />
+  <ui:VisualElement class="cosmicelements-screen layout-column">
+    <ui:VisualElement class="cosmicelements-background" />
+    <ui:VisualElement class="cosmicelements-frame layout-column start-screen">
+      <ui:Label class="cosmicelements-title" text="Welcome, Captain" />
+      <ui:Label class="cosmicelements-subtitle" text="Prepare your profile before launch" />
+      <ui:TextField name="player-name-field" class="cosmicelements-input" label="Callsign" />
       <ui:VisualElement class="form-button-row">
         <ui:Button name="confirm-button" class="form-button" text="Confirm" />
         <ui:Button name="cancel-button" class="form-button form-button--secondary" text="Cancel" />

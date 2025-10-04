@@ -1,32 +1,32 @@
 using Creativefusion.Ui.Screens.Screens;
-using Creativefusion.Ui.Styles.Constellation.Internal;
+using Creativefusion.Ui.Styles.CosmicElements.Internal;
 using UnityEngine.UIElements;
 
-namespace Creativefusion.Ui.Styles.Constellation.Screens
+namespace Creativefusion.Ui.Styles.CosmicElements.Screens
 {
     /// <summary>
-    /// Constellation-themed implementation of the <see cref="ShopScreen"/> visuals.
+    /// CosmicElements-themed implementation of the <see cref="ShopScreen"/> visuals.
     /// </summary>
-    public sealed class ConstellationShopScreen : ShopScreen
+    public sealed class CosmicElementsShopScreen : ShopScreen
     {
         private static readonly string[] StylePaths =
         {
-            ConstellationResourcePaths.Style("base"),
-            ConstellationResourcePaths.Style("lists"),
-            ConstellationResourcePaths.Style("shop")
+            CosmicElementsResourcePaths.Style("base"),
+            CosmicElementsResourcePaths.Style("lists"),
+            CosmicElementsResourcePaths.Style("shop")
         };
 
-        private static readonly string CategoryTemplatePath = ConstellationResourcePaths.Template("ShopCategory");
-        private static readonly string ItemTemplatePath = ConstellationResourcePaths.Template("ShopItem");
+        private static readonly string CategoryTemplatePath = CosmicElementsResourcePaths.Template("ShopCategory");
+        private static readonly string ItemTemplatePath = CosmicElementsResourcePaths.Template("ShopItem");
 
         /// <inheritdoc />
         protected override void OnInitialize()
         {
-            ConstellationScreenUtility.ApplyLayout(this, ConstellationResourcePaths.Layout("Shop"), StylePaths);
+            CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("Shop"), StylePaths);
             ConfigureTemplates(
-                ConstellationScreenUtility.CreateTemplateFactory(CategoryTemplatePath),
+                CosmicElementsScreenUtility.CreateTemplateFactory(CategoryTemplatePath),
                 BindCategory,
-                ConstellationScreenUtility.CreateTemplateFactory(ItemTemplatePath),
+                CosmicElementsScreenUtility.CreateTemplateFactory(ItemTemplatePath),
                 BindItem);
             base.OnInitialize();
         }

@@ -1,23 +1,23 @@
 using Creativefusion.Ui.Screens.Screens;
-using Creativefusion.Ui.Styles.Constellation.Internal;
+using Creativefusion.Ui.Styles.CosmicElements.Internal;
 
-namespace Creativefusion.Ui.Styles.Constellation.Screens
+namespace Creativefusion.Ui.Styles.CosmicElements.Screens
 {
     /// <summary>
-    /// Constellation-themed implementation of the <see cref="MainMenuScreen"/> visuals.
+    /// CosmicElements-themed implementation of the <see cref="MainMenuScreen"/> visuals.
     /// </summary>
-    public sealed class ConstellationMainMenuScreen : MainMenuScreen
+    public sealed class CosmicElementsMainMenuScreen : MainMenuScreen
     {
         private static readonly string[] StylePaths =
         {
-            ConstellationResourcePaths.Style("base"),
-            ConstellationResourcePaths.Style("main-menu")
+            CosmicElementsResourcePaths.Style("base"),
+            CosmicElementsResourcePaths.Style("main-menu")
         };
 
         /// <inheritdoc />
         protected override void OnInitialize()
         {
-            ConstellationScreenUtility.ApplyLayout(this, ConstellationResourcePaths.Layout("MainMenu"), StylePaths);
+            CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("MainMenu"), StylePaths);
             base.OnInitialize();
         }
     }

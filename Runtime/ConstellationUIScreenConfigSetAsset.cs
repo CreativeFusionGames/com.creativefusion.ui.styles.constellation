@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using Creativefusion.Ui.Core;
 using UnityEngine;
 
-namespace Creativefusion.Ui.Styles.Constellation
+namespace Creativefusion.Ui.Styles.CosmicElements
 {
     /// <summary>
-    /// Scriptable object representation of a <see cref="UIScreenConfigSet"/> for the Constellation theme.
+    /// Scriptable object representation of a <see cref="UIScreenConfigSet"/> for the CosmicElements theme.
     /// </summary>
     [CreateAssetMenu(
-        fileName = "ConstellationUIScreenConfigSet",
-        menuName = "CreativeFusion/UI/Constellation/Screen Config Set" )]
-    public sealed class ConstellationUIScreenConfigSetAsset : ScriptableObject
+        fileName = "CosmicElementsUIScreenConfigSet",
+        menuName = "CreativeFusion/UI/CosmicElements/Screen Config Set" )]
+    public sealed class CosmicElementsUIScreenConfigSetAsset : ScriptableObject
     {
         [SerializeField]
         private ScreenEntry[] _screens = Array.Empty<ScreenEntry>();
@@ -55,7 +55,7 @@ namespace Creativefusion.Ui.Styles.Constellation
             {
                 if (string.IsNullOrWhiteSpace(entry.ScreenId))
                 {
-                    Debug.LogWarning($"Constellation screen entry on asset '{name}' has an empty screen id.", this);
+                    Debug.LogWarning($"CosmicElements screen entry on asset '{name}' has an empty screen id.", this);
                 }
                 else if (entry.TryResolveType() == null)
                 {

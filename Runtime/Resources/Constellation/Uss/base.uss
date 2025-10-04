@@ -1,21 +1,21 @@
 :root {
-    --constellation-primary: #7c5dfa;
-    --constellation-primary-bright: #a786ff;
-    --constellation-secondary: #1b2f52;
-    --constellation-surface: rgba(16, 22, 45, 0.88);
-    --constellation-surface-alt: rgba(20, 28, 56, 0.72);
-    --constellation-border: rgba(124, 93, 250, 0.45);
-    --constellation-text-muted: rgba(255, 255, 255, 0.72);
+    --cosmicelements-primary: #7c5dfa;
+    --cosmicelements-primary-bright: #a786ff;
+    --cosmicelements-secondary: #1b2f52;
+    --cosmicelements-surface: rgba(16, 22, 45, 0.88);
+    --cosmicelements-surface-alt: rgba(20, 28, 56, 0.72);
+    --cosmicelements-border: rgba(124, 93, 250, 0.45);
+    --cosmicelements-text-muted: rgba(255, 255, 255, 0.72);
 }
 
-.constellation-screen {
+.cosmicelements-screen {
     flex-grow: 1;
     position: relative;
     color: white;
     font-size: 16px;
 }
 
-.constellation-background {
+.cosmicelements-background {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -28,25 +28,25 @@
     pointer-events: none;
 }
 
-.constellation-frame {
+.cosmicelements-frame {
     position: relative;
     margin: 32px;
     padding: 32px;
     border-radius: 18px;
-    background-color: var(--constellation-surface);
-    border: 1px solid var(--constellation-border);
+    background-color: var(--cosmicelements-surface);
+    border: 1px solid var(--cosmicelements-border);
     gap: 20px;
     box-shadow: 0 28px 48px rgba(12, 18, 40, 0.55);
 }
 
-.constellation-title {
+.cosmicelements-title {
     unity-font-style: bold;
     font-size: 32px;
     letter-spacing: 2px;
 }
 
-.constellation-subtitle {
-    color: var(--constellation-text-muted);
+.cosmicelements-subtitle {
+    color: var(--cosmicelements-text-muted);
     unity-font-style: normal;
     font-size: 16px;
 }
@@ -70,7 +70,7 @@
     border-radius: 10px;
     border-width: 0;
     color: white;
-    background-color: var(--constellation-primary);
+    background-color: var(--cosmicelements-primary);
     unity-font-style: bold;
     letter-spacing: 1px;
     transition-duration: 200ms;
@@ -78,7 +78,7 @@
 
 .form-button:hover,
 .menu-button:hover {
-    background-color: var(--constellation-primary-bright);
+    background-color: var(--cosmicelements-primary-bright);
 }
 
 .form-button:disabled,
@@ -90,7 +90,7 @@
 .form-button--secondary,
 .menu-button--secondary {
     background-color: rgba(255, 255, 255, 0.08);
-    color: var(--constellation-text-muted);
+    color: var(--cosmicelements-text-muted);
     border: 1px solid rgba(124, 93, 250, 0.35);
 }
 
@@ -99,21 +99,21 @@
     background-color: rgba(255, 255, 255, 0.14);
 }
 
-.constellation-input {
-    background-color: var(--constellation-surface-alt);
+.cosmicelements-input {
+    background-color: var(--cosmicelements-surface-alt);
     border-radius: 10px;
     border: 1px solid rgba(124, 93, 250, 0.25);
     color: white;
     padding: 6px 12px;
 }
 
-.constellation-input > .unity-text-input {
+.cosmicelements-input > .unity-text-input {
     background-color: transparent;
     color: white;
 }
 
-.constellation-input > .unity-label {
-    color: var(--constellation-primary-bright);
+.cosmicelements-input > .unity-label {
+    color: var(--cosmicelements-primary-bright);
     unity-font-style: bold;
 }
 
@@ -138,7 +138,7 @@
 
 .preview-description,
 .inspector-description {
-    color: var(--constellation-text-muted);
+    color: var(--cosmicelements-text-muted);
     font-size: 14px;
     line-height: 1.4;
 }
@@ -170,6 +170,6 @@
 
 .item-status,
 .item-cost {
-    color: var(--constellation-text-muted);
+    color: var(--cosmicelements-text-muted);
     font-size: 13px;
 }

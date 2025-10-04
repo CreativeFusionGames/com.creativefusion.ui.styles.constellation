@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>In-Game HUD</title>
+  <title>Energy Depleted</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,19 +17,19 @@
       <div class="background-pattern"></div>
       <div class="screen-content">
         <div class="header">
-          <div class="title-lg">In-Game HUD</div>
-          <div class="subtitle">Heads-up display elements</div>
+          <div class="title-lg">Energy Depleted</div>
+          <div class="subtitle">Regeneration underway</div>
         </div>
         
-    <div class="hud">
-      <div class="hud-top">
-        <div class="hud-chip"><span class="material-icons">favorite</span> 120</div>
-        <div class="hud-chip"><span class="material-icons">timer</span> 03:12</div>
-        <div class="hud-chip"><span class="material-icons">map</span> Crystal Caverns</div>
+    <div class="content centered">
+      <div class="panel" style="padding:18px; width:85%;">
+        <div class="hstack" style="justify-content:space-between;"><div><strong>Energy</strong><div class="subtitle">0 / 150</div></div><span class="material-icons">bolt</span></div>
+        <div class="progress-wrap" style="margin-top:8px;"><div class="progress-bar" style="width:12%;"></div></div>
+        <div class="subtitle" style="margin-top:8px;">Next point in <strong>04:12</strong></div>
       </div>
-      <div class="hud-bottom">
-        <div class="hud-chip"><span class="material-icons">gps_fixed</span> Objective: Reach the Core</div>
-        <div class="hud-chip"><span class="material-icons">auto_awesome</span> x12 Combo</div>
+      <div class="hstack">
+        <div class="btn primary"><span class="material-icons">local_offer</span> Refill — 80 Gems</div>
+        <div class="btn"><span class="material-icons">watch_later</span> Wait</div>
       </div>
     </div>
     

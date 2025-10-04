@@ -1,9 +1,9 @@
-namespace Creativefusion.Ui.Styles.Constellation
+namespace Creativefusion.Ui.Styles.CosmicElements
 {
     /// <summary>
-    /// Provides canonical screen identifiers for the Constellation UI theme.
+    /// Provides canonical screen identifiers for the CosmicElements UI theme.
     /// </summary>
-    public static class ConstellationScreenIds
+    public static class CosmicElementsScreenIds
     {
         /// <summary>
         /// Identifier for the main menu screen.

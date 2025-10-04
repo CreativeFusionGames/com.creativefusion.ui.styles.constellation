@@ -1,13 +1,13 @@
 using System;
 
-namespace Creativefusion.Ui.Styles.Constellation.Internal
+namespace Creativefusion.Ui.Styles.CosmicElements.Internal
 {
     /// <summary>
-    /// Centralizes resource path construction for the Constellation UI theme.
+    /// Centralizes resource path construction for the CosmicElements UI theme.
     /// </summary>
-    internal static class ConstellationResourcePaths
+    internal static class CosmicElementsResourcePaths
     {
-        private const string Root = "Constellation";
+        private const string Root = "CosmicElements";
         private const string LayoutRoot = Root + "/Uxml";
         private const string TemplateRoot = LayoutRoot + "/Templates";
         private const string StyleRoot = Root + "/Uss";

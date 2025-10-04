@@ -1,19 +1,19 @@
 using System;
 using Creativefusion.Ui.Core;
-using Creativefusion.Ui.Styles.Constellation.Internal;
+using Creativefusion.Ui.Styles.CosmicElements.Internal;
 using UnityEngine;
 
-namespace Creativefusion.Ui.Styles.Constellation
+namespace Creativefusion.Ui.Styles.CosmicElements
 {
     /// <summary>
-    /// Provides runtime helpers for accessing Constellation style assets.
+    /// Provides runtime helpers for accessing CosmicElements style assets.
     /// </summary>
-    public static class ConstellationStyle
+    public static class CosmicElementsStyle
     {
         private static UIScreenConfigSet? _cachedConfig;
 
         /// <summary>
-        /// Loads the Constellation <see cref="UIScreenConfigSet"/> from Resources and caches the result.
+        /// Loads the CosmicElements <see cref="UIScreenConfigSet"/> from Resources and caches the result.
         /// </summary>
         /// <returns>The configured <see cref="UIScreenConfigSet"/> for this style pack.</returns>
         public static UIScreenConfigSet GetConfigSet()
@@ -23,10 +23,10 @@ namespace Creativefusion.Ui.Styles.Constellation
                 return _cachedConfig;
             }
 
-            var asset = Resources.Load<ConstellationUIScreenConfigSetAsset>(ConstellationResourcePaths.Config("ConstellationUIScreenConfigSet"));
+            var asset = Resources.Load<CosmicElementsUIScreenConfigSetAsset>(CosmicElementsResourcePaths.Config("CosmicElementsUIScreenConfigSet"));
             if (asset == null)
             {
-                throw new InvalidOperationException("Constellation UIScreenConfigSet asset could not be located in Resources.");
+                throw new InvalidOperationException("CosmicElements UIScreenConfigSet asset could not be located in Resources.");
             }
 
             _cachedConfig = asset.Build();

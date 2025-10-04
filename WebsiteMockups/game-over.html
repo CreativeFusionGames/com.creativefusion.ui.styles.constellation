@@ -2,37 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Game Over</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <div class="phone-mockup">
     <div class="phone-screen">
       <div class="notch"></div>
+      <div class="background-pattern"></div>
       <div class="screen-content">
-        <div class="bg">
-          <div class="pattern"></div>
-          
-<div class="center" style="gap:10px;margin-top:40px">
-  <div class="big">GAME OVER</div>
-  <div class="sub">Crystal core destabilized at 3,450m.</div>
-</div>
-<div class="menu" style="margin-top:10px">
-  <div class="row-item"><div class="left"><span class="material-icons">score</span> Score</div><div>128,420</div></div>
-  <div class="row-item"><div class="left"><span class="material-icons">bolt</span> Max Combo</div><div>x17</div></div>
-  <div class="row-item"><div class="left"><span class="material-icons">timer</span> Time</div><div>05:36</div></div>
-</div>
-<div class="menu" style="margin-top:8px">
-  <div class="menu-item primary"><span class="material-icons">replay</span> RETRY</div>
-  <div class="menu-item"><span class="material-icons">home</span> MAIN MENU</div>
-</div>
-
+        <div class="header">
+          <div class="title-lg">Game Over</div>
+          <div class="subtitle">The void reclaims your shards</div>
         </div>
+        
+    <div class="content centered">
+      <div class="title-xl">Defeat</div>
+      <div class="subtitle">Crystal Caverns — Depth 5</div>
+      <div class="panel" style="padding:16px; width:85%;">
+        <div class="hstack" style="justify-content:space-between;"><span class="kicker">Score</span><strong>42,780</strong></div>
+        <div class="hstack" style="justify-content:space-between;"><span class="kicker">Best Combo</span><strong>x14</strong></div>
+        <div class="hstack" style="justify-content:space-between;"><span class="kicker">Time Survived</span><strong>03:26</strong></div>
+      </div>
+      <div class="hstack">
+        <div class="btn"><span class="material-icons">replay</span> Retry</div>
+        <div class="btn primary"><span class="material-icons">home</span> Return to Hub</div>
+      </div>
+    </div>
+    
       </div>
     </div>
   </div>

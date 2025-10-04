@@ -18,8 +18,20 @@
       gap:30px;
       padding:20px;
     }
-    .screen-wrapper { display:flex; flex-direction:column; align-items:center; gap:10px; }
-    .phone-frame { width:320px; height:640px; border:none; border-radius:36px; box-shadow:0 10px 30px rgba(0,0,0,0.3); overflow:hidden; }
+    .screen-wrapper {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:10px;
+    }
+    .phone-frame {
+      width:320px;
+      height:640px;
+      border:none;
+      border-radius:36px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+      overflow:hidden;
+    }
     .caption { font-size:15px; font-weight:600; text-align:center; }
   </style>
 </head>
@@ -28,7 +40,7 @@
   <div class="grid-all" id="screensGrid"></div>
 
   <script>
-    const screens = [["splash-loading.html", "Splash / Loading"], ["main-menu.html", "Main Menu / Hub"], ["game-mode-selection.html", "Game Mode Selection"], ["pause-menu.html", "Pause Menu"], ["game-over.html", "Game Over"], ["victory.html", "Victory / Completion"], ["lives-energy-timer.html", "Lives / Energy / Timer"], ["daily-rewards.html", "Daily Rewards / Login Bonus"], ["quests.html", "Quest / Missions"], ["achievements.html", "Achievements / Trophies"], ["stats-profile.html", "Statistics / Player Profile"], ["character-selection.html", "Character Selection / Skins"], ["shop-store.html", "Shop / Store"], ["currency-balance.html", "Currency Balance Display"], ["ads-reward.html", "Ads & Rewards UI"], ["iap-flow.html", "In-App Purchase Flow"], ["battle-pass.html", "Battle Pass / Season Pass"], ["leaderboards.html", "Leaderboards"], ["settings.html", "Settings Menu"], ["notifications-mailbox.html", "Notifications / Mailbox"], ["updates-patch-notes.html", "Updates & Patch Notes"], ["mini-games.html", "Mini-games / Side Games"], ["spin-wheel.html", "Spin the Wheel / Prize Chest"], ["hud.html", "HUD (Heads-Up Display)"], ["skill-upgrades.html", "Skill Upgrades"], ["progression-bar.html", "Progression Bar"], ["level-select-grid.html", "Level Select \u2014 Grid"], ["level-select-path.html", "Level Select \u2014 Path (Vertical)"], ["level-select-tabs.html", "Level Select \u2014 Tiered Tabs"]];
+    const screens = [["splash-loading.html", "Splash / Loading"], ["main-menu.html", "Main Menu / Hub"], ["game-mode.html", "Game Mode Selection"], ["pause-menu.html", "Pause Menu"], ["game-over.html", "Game Over"], ["victory.html", "Victory / Completion"], ["lives-energy.html", "Lives / Energy / Timer"], ["daily-rewards.html", "Daily Rewards / Login Bonus"], ["quests.html", "Quest / Mission"], ["achievements.html", "Achievements / Trophies"], ["profile.html", "Statistics / Player Profile"], ["character-select.html", "Character Selection / Skins"], ["shop.html", "Shop / Store"], ["currency-display.html", "Currency Balance Display"], ["ads-reward.html", "Ads & Rewards UI"], ["inapp-purchase.html", "In-App Purchase Flow"], ["battle-pass.html", "Battle Pass / Season Pass"], ["leaderboards.html", "Leaderboards"], ["settings.html", "Settings Menu"], ["mailbox.html", "Notifications / Mailbox"], ["patch-notes.html", "Updates & Patch Notes"], ["mini-games.html", "Mini-games / Side Games"], ["spin-wheel.html", "Spin the Wheel / Prize Chest"], ["hud.html", "HUD (Heads-Up Display)"], ["skills.html", "Skill Upgrades"], ["progression.html", "Progression Bar / Level-up"], ["level-grid.html", "Level Select \u2014 Grid"], ["level-path.html", "Level Select \u2014 Vertical Path"], ["level-tabs.html", "Level Select \u2014 Tiered Tabs"]];
     const grid = document.getElementById("screensGrid");
     screens.forEach(([file, title]) => {
       const wrap = document.createElement("div");

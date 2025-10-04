@@ -1,29 +1,29 @@
 using Creativefusion.Ui.Screens.Screens;
-using Creativefusion.Ui.Styles.Constellation.Internal;
+using Creativefusion.Ui.Styles.CosmicElements.Internal;
 using UnityEngine.UIElements;
 
-namespace Creativefusion.Ui.Styles.Constellation.Screens
+namespace Creativefusion.Ui.Styles.CosmicElements.Screens
 {
     /// <summary>
-    /// Constellation-themed implementation of the <see cref="LevelSelectScreen"/> visuals.
+    /// CosmicElements-themed implementation of the <see cref="LevelSelectScreen"/> visuals.
     /// </summary>
-    public sealed class ConstellationLevelSelectScreen : LevelSelectScreen
+    public sealed class CosmicElementsLevelSelectScreen : LevelSelectScreen
     {
         private static readonly string[] StylePaths =
         {
-            ConstellationResourcePaths.Style("base"),
-            ConstellationResourcePaths.Style("lists"),
-            ConstellationResourcePaths.Style("level-select")
+            CosmicElementsResourcePaths.Style("base"),
+            CosmicElementsResourcePaths.Style("lists"),
+            CosmicElementsResourcePaths.Style("level-select")
         };
 
-        private static readonly string LevelTemplatePath = ConstellationResourcePaths.Template("LevelSelectItem");
+        private static readonly string LevelTemplatePath = CosmicElementsResourcePaths.Template("LevelSelectItem");
 
         /// <inheritdoc />
         protected override void OnInitialize()
         {
-            ConstellationScreenUtility.ApplyLayout(this, ConstellationResourcePaths.Layout("LevelSelect"), StylePaths);
+            CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("LevelSelect"), StylePaths);
             ConfigureItemTemplate(
-                ConstellationScreenUtility.CreateTemplateFactory(LevelTemplatePath),
+                CosmicElementsScreenUtility.CreateTemplateFactory(LevelTemplatePath),
                 BindLevelItem);
             base.OnInitialize();
         }

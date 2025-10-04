@@ -4,12 +4,12 @@ using Creativefusion.Ui.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Creativefusion.Ui.Styles.Constellation.Internal
+namespace Creativefusion.Ui.Styles.CosmicElements.Internal
 {
     /// <summary>
     /// Provides helpers for loading and applying themed UI Toolkit assets.
     /// </summary>
-    internal static class ConstellationScreenUtility
+    internal static class CosmicElementsScreenUtility
     {
         private static readonly Dictionary<string, VisualTreeAsset> LayoutCache = new(StringComparer.Ordinal);
         private static readonly Dictionary<string, VisualTreeAsset> TemplateCache = new(StringComparer.Ordinal);
@@ -34,7 +34,7 @@ namespace Creativefusion.Ui.Styles.Constellation.Internal
             var container = layout.Instantiate();
             container.name = layout.name + "-container";
             screen.Add(container);
-            screen.AddToClassList("constellation-screen-root");
+            screen.AddToClassList("cosmicelements-screen-root");
 
             if (styleSheetPaths == null || styleSheetPaths.Length == 0)
             {
@@ -130,7 +130,7 @@ namespace Creativefusion.Ui.Styles.Constellation.Internal
             var asset = Resources.Load<T>(path);
             if (asset == null)
             {
-                throw new InvalidOperationException($"Constellation style resource not found at '{path}'.");
+                throw new InvalidOperationException($"CosmicElements style resource not found at '{path}'.");
             }
 
             return asset;
