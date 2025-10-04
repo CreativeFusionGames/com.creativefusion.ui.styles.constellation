@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6faa0178cd9c4b37a8c07398ab51c524, type: 3}
+  m_Name: ConstellationUIScreenConfigSet
+  m_EditorClassIdentifier: 
+  _screens:
+  - _screenId: main-menu
+    _screenTypeName: Creativefusion.Ui.Styles.Constellation.Screens.ConstellationMainMenuScreen, Creativefusion.Ui.Styles.Constellation
+    _cacheInstance: 1
+  - _screenId: start
+    _screenTypeName: Creativefusion.Ui.Styles.Constellation.Screens.ConstellationStartScreen, Creativefusion.Ui.Styles.Constellation
+    _cacheInstance: 1
+  - _screenId: level-select
+    _screenTypeName: Creativefusion.Ui.Styles.Constellation.Screens.ConstellationLevelSelectScreen, Creativefusion.Ui.Styles.Constellation
+    _cacheInstance: 1
+  - _screenId: shop
+    _screenTypeName: Creativefusion.Ui.Styles.Constellation.Screens.ConstellationShopScreen, Creativefusion.Ui.Styles.Constellation
+    _cacheInstance: 1

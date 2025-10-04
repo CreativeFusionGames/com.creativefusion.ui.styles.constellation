@@ -1,0 +1,7 @@
+.constellation-frame .constellation-input {
+    max-width: 360px;
+}
+
+.constellation-frame .form-button-row {
+    justify-content: flex-end;
+}

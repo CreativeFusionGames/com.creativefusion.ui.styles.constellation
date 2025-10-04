@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="list-item shop-item layout-column">
+    <ui:VisualElement class="shop-item__header">
+      <ui:Label name="item-title" class="item-title" text="Item" />
+      <ui:Label name="item-cost" class="item-cost" text="$0" />
+    </ui:VisualElement>
+    <ui:Label name="item-status" class="item-status" text="Status" />
+  </ui:VisualElement>
+</ui:UXML>

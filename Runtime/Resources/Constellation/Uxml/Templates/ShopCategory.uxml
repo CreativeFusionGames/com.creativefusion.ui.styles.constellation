@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="list-item category-item">
+    <ui:Label name="category-title" class="item-title" text="Category" />
+  </ui:VisualElement>
+</ui:UXML>

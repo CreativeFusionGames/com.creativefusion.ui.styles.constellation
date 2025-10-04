@@ -1,0 +1,11 @@
+.constellation-frame.start-screen {
+    max-width: 440px;
+}
+
+.constellation-frame .constellation-input {
+    margin-top: 12px;
+}
+
+.constellation-frame .form-button-row {
+    margin-top: 8px;
+}

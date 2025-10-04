@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="list-item level-item layout-column">
+    <ui:Label name="level-title" class="item-title" text="Level" />
+    <ui:Label name="level-status" class="item-status" text="Status" />
+  </ui:VisualElement>
+</ui:UXML>

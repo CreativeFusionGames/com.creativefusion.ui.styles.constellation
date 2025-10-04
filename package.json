@@ -1,0 +1,23 @@
+{
+  "name": "com.creativefusion.ui.styles.constellation",
+  "displayName": "CreativeFusion UI Styles - Constellation",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "description": "UI Style Pack #1 offering Constellation themed UI Toolkit layouts, templates, and screen mappings for CreativeFusion navigation flows.",
+  "keywords": [
+    "ui",
+    "uitoolkit",
+    "styles",
+    "screens",
+    "constellation"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "com.creativefusion.ui.core": "1.0.0",
+    "com.creativefusion.ui.screens": "1.0.0"
+  },
+  "author": {
+    "name": "CreativeFusion",
+    "email": "dev@creativefusion.example"
+  }
+}

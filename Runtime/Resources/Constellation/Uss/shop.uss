@@ -1,0 +1,34 @@
+.shop-grid {
+    align-items: stretch;
+}
+
+.category-list {
+    align-self: stretch;
+}
+
+.shop-items {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+    padding: 18px;
+    border: 1px solid rgba(124, 93, 250, 0.22);
+}
+
+.shop-action-row {
+    justify-content: space-between;
+}
+
+.shop-action-row .form-button {
+    min-width: 140px;
+}
+
+.shop-action-row .form-button:nth-child(1) {
+    background-image: linear-gradient(120deg, rgba(124, 93, 250, 0.85), rgba(83, 222, 238, 0.6));
+}
+
+.shop-action-row .form-button:nth-child(2) {
+    background-color: rgba(124, 93, 250, 0.4);
+}
+
+.shop-action-row .form-button:nth-child(2):hover {
+    background-color: rgba(124, 93, 250, 0.55);
+}

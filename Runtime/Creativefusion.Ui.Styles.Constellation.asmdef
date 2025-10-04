@@ -1,0 +1,18 @@
+{
+  "name": "Creativefusion.Ui.Styles.Constellation",
+  "references": [
+    "UnityEngine.CoreModule",
+    "UnityEngine.UIElementsModule",
+    "Creativefusion.Ui.Core",
+    "Creativefusion.Ui.Screens"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
