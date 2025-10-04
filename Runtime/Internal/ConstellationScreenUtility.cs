@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Creativefusion.Ui.Core;
+using CreativeFusion.Ui.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Creativefusion.Ui.Styles.CosmicElements.Internal
+namespace CreativeFusion.Ui.Styles.CosmicElements.Internal
 {
     /// <summary>
     /// Provides helpers for loading and applying themed UI Toolkit assets.

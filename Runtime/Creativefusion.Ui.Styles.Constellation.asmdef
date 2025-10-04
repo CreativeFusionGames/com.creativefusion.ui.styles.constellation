@@ -1,10 +1,10 @@
 {
-  "name": "Creativefusion.Ui.Styles.CosmicElements",
+  "name": "CreativeFusion.Ui.Styles.CosmicElements",
   "references": [
     "UnityEngine.CoreModule",
     "UnityEngine.UIElementsModule",
-    "Creativefusion.Ui.Core",
-    "Creativefusion.Ui.Screens"
+    "CreativeFusion.Ui.Core",
+    "CreativeFusion.Ui.Screens"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

@@ -1,6 +1,6 @@
 using System;
 
-namespace Creativefusion.Ui.Styles.CosmicElements.Internal
+namespace CreativeFusion.Ui.Styles.CosmicElements.Internal
 {
     /// <summary>
     /// Centralizes resource path construction for the CosmicElements UI theme.

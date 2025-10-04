@@ -1,9 +1,9 @@
 using System;
-using Creativefusion.Ui.Core;
-using Creativefusion.Ui.Styles.CosmicElements.Internal;
+using CreativeFusion.Ui.Core;
+using CreativeFusion.Ui.Styles.CosmicElements.Internal;
 using UnityEngine;
 
-namespace Creativefusion.Ui.Styles.CosmicElements
+namespace CreativeFusion.Ui.Styles.CosmicElements
 {
     /// <summary>
     /// Provides runtime helpers for accessing CosmicElements style assets.

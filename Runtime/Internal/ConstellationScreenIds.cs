@@ -1,4 +1,4 @@
-namespace Creativefusion.Ui.Styles.CosmicElements
+namespace CreativeFusion.Ui.Styles.CosmicElements
 {
     /// <summary>
     /// Provides canonical screen identifiers for the CosmicElements UI theme.

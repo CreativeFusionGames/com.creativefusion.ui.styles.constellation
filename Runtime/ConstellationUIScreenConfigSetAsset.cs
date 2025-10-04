@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using Creativefusion.Ui.Core;
+using CreativeFusion.Ui.Core;
 using UnityEngine;
 
-namespace Creativefusion.Ui.Styles.CosmicElements
+namespace CreativeFusion.Ui.Styles.CosmicElements
 {
     /// <summary>
     /// Scriptable object representation of a <see cref="UIScreenConfigSet"/> for the CosmicElements theme.

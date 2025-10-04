@@ -27,8 +27,8 @@ CosmicElements is the first CreativeFusion UI Toolkit style pack. It ships produ
 3. Configure the navigation service with the CosmicElements config set:
 
 ```csharp
-using Creativefusion.Ui.Core;
-using Creativefusion.Ui.Styles.CosmicElements;
+using CreativeFusion.Ui.Core;
+using CreativeFusion.Ui.Styles.CosmicElements;
 
 public sealed class CosmicElementsEntry : MonoBehaviour
 {

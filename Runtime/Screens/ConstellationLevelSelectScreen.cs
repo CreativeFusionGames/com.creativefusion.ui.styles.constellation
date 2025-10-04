@@ -1,8 +1,8 @@
-using Creativefusion.Ui.Screens.Screens;
-using Creativefusion.Ui.Styles.CosmicElements.Internal;
+using CreativeFusion.Ui.Screens.Screens;
+using CreativeFusion.Ui.Styles.CosmicElements.Internal;
 using UnityEngine.UIElements;
 
-namespace Creativefusion.Ui.Styles.CosmicElements.Screens
+namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
 {
     /// <summary>
     /// CosmicElements-themed implementation of the <see cref="LevelSelectScreen"/> visuals.

@@ -1,9 +1,9 @@
 using System;
-using Creativefusion.Ui.Core;
+using CreativeFusion.Ui.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Creativefusion.Ui.Styles.CosmicElements
+namespace CreativeFusion.Ui.Styles.CosmicElements
 {
     /// <summary>
     /// Example MonoBehaviour that wires the CosmicElements style pack into the navigation service.

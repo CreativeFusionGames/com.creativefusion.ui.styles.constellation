@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _screens:
   - _screenId: main-menu
-    _screenTypeName: Creativefusion.Ui.Styles.CosmicElements.Screens.CosmicElementsMainMenuScreen, Creativefusion.Ui.Styles.CosmicElements
+    _screenTypeName: CreativeFusion.Ui.Styles.CosmicElements.Screens.CosmicElementsMainMenuScreen, CreativeFusion.Ui.Styles.CosmicElements
     _cacheInstance: 1
   - _screenId: start
-    _screenTypeName: Creativefusion.Ui.Styles.CosmicElements.Screens.CosmicElementsStartScreen, Creativefusion.Ui.Styles.CosmicElements
+    _screenTypeName: CreativeFusion.Ui.Styles.CosmicElements.Screens.CosmicElementsStartScreen, CreativeFusion.Ui.Styles.CosmicElements
     _cacheInstance: 1
   - _screenId: level-select
-    _screenTypeName: Creativefusion.Ui.Styles.CosmicElements.Screens.CosmicElementsLevelSelectScreen, Creativefusion.Ui.Styles.CosmicElements
+    _screenTypeName: CreativeFusion.Ui.Styles.CosmicElements.Screens.CosmicElementsLevelSelectScreen, CreativeFusion.Ui.Styles.CosmicElements
     _cacheInstance: 1
   - _screenId: shop
-    _screenTypeName: Creativefusion.Ui.Styles.CosmicElements.Screens.CosmicElementsShopScreen, Creativefusion.Ui.Styles.CosmicElements
+    _screenTypeName: CreativeFusion.Ui.Styles.CosmicElements.Screens.CosmicElementsShopScreen, CreativeFusion.Ui.Styles.CosmicElements
     _cacheInstance: 1
