@@ -69,5 +69,3 @@ Use the constants in `CosmicElementsScreenIds` for navigation calls.
 ## Support & Maintenance
 - Errors loading resources throw descriptive `InvalidOperationException` messages to help catch missing assets early.
 - All visual assets are stored under Resources for compatibility with addressable loading or asset bundles if you later migrate away from Resources.
-
-For the full engineering guidelines and deployment process, read [`agents.md`](agents.md).
