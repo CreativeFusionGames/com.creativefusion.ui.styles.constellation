@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+<ui:VisualElement class="cosmicelements-screen layout-column">
+<ui:VisualElement class="cosmicelements-background"/>
+
+
+<ui:VisualElement class="cosmicelements-frame layout-column responsive-pad gap-12" name="grid-frame">
+<ui:VisualElement class="header layout-column gap-8">
+<ui:Label class="ce-title-lg" text="Level Select — Grid"/>
+<ui:Label class="ce-subtitle" text="Choose any unlocked stage"/>
+</ui:VisualElement>
+
+
+<!-- ListView to represent grid items (3-up look via fixed item width inside template) -->
+<ui:ListView name="level-grid" class="level-grid" selection-type="Single" virtualization-method="DynamicHeight"/>
+</ui:VisualElement>
+</ui:VisualElement>
+</ui:UXML>

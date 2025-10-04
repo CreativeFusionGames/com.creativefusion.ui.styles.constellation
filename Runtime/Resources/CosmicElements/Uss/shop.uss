@@ -1,48 +1,7 @@
-.shop-grid {
-    align-items: stretch;
-}
+#shop-frame { max-width: 900px; }
+.shop-list { row-gap: 12px; }
+.shop-card { }
+.shop-card__title { -unity-font-style: bold; font-size: 15px; }
+.shop-card__subtitle { color: var(--ce-muted); font-size: 12px; }
+.shop-card__row { display: flex; flex-direction: row; align-items: center; }
 
-.category-list {
-    align-self: stretch;
-}
-
-.shop-items {
-    background-color: rgba(0, 0, 0, 0.08);
-    border-radius: 18px;
-    padding: 18px;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    border-left-color: rgba(124, 93, 250, 0.22);
-    border-right-color: rgba(124, 93, 250, 0.22);
-    border-top-color: rgba(124, 93, 250, 0.22);
-    border-bottom-color: rgba(124, 93, 250, 0.22);
-}
-
-.shop-action-row {
-    justify-content: space-between;
-}
-
-.shop-action-row .form-button {
-    min-width: 140px;
-}
-
-/* First button → assign "primary-button" in UXML */
-.shop-action-row .form-button.primary-button {
-    background-image: linear-gradient(
-        120deg,
-        rgba(124, 93, 250, 0.85),
-        rgba(83, 222, 238, 0.6)
-    );
-}
-
-/* Second button → assign "secondary-button" in UXML */
-.shop-action-row .form-button.secondary-button {
-    background-color: rgba(124, 93, 250, 0.4);
-}
-
-/* Hover state only works with classes */
-.shop-action-row .form-button.secondary-button:hover {
-    background-color: rgba(124, 93, 250, 0.55);
-}

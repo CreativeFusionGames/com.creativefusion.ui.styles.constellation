@@ -1,0 +1,26 @@
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+<ui:VisualElement class="cosmicelements-screen layout-column">
+<ui:VisualElement class="cosmicelements-background"/>
+
+
+<ui:VisualElement class="cosmicelements-frame layout-column responsive-pad gap-12" name="tabs-frame">
+<ui:VisualElement class="header layout-column gap-8">
+<ui:Label class="ce-title-lg" text="Level Select — Worlds"/>
+<ui:Label class="ce-subtitle" text="Switch between realms"/>
+</ui:VisualElement>
+
+
+<ui:VisualElement class="layout-row gap-8" name="tabs-row">
+<ui:Button class="btn btn--primary" name="tab-world-1" text="World I"/>
+<ui:Button class="btn" name="tab-world-2" text="World II"/>
+<ui:Button class="btn" name="tab-world-3" text="World III"/>
+</ui:VisualElement>
+
+
+<ui:ListView name="level-tiles" class="level-tiles" selection-type="Single" virtualization-method="DynamicHeight"/>
+</ui:VisualElement>
+</ui:VisualElement>
+</ui:UXML>

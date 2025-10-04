@@ -1,0 +1,35 @@
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+<ui:VisualElement class="cosmicelements-screen layout-column">
+<ui:VisualElement class="cosmicelements-background"/>
+
+
+<ui:VisualElement class="cosmicelements-frame layout-column responsive-pad gap-12" name="path-frame">
+<ui:VisualElement class="header layout-column gap-8">
+<ui:Label class="ce-title-lg" text="Level Select — Path"/>
+<ui:Label class="ce-subtitle" text="Progress along the rift line"/>
+</ui:VisualElement>
+
+
+<ui:VisualElement class="layout-row gap-16">
+<ui:VisualElement class="layout-column centered gap-12" name="path-column">
+<!-- Vertical node list -->
+<ui:ListView name="path-nodes" class="path-nodes" selection-type="Single" virtualization-method="DynamicHeight"/>
+</ui:VisualElement>
+
+
+<ui:VisualElement class="layout-column centered card gap-8" name="path-detail" style="flex-grow:1;">
+<ui:Label class="ce-kicker" text="Dimension 5"/>
+<ui:Label class="ce-title-lg" text="Crystal Caverns"/>
+<ui:VisualElement class="layout-row stars gap-8">
+<ui:Label class="star" text="★"/>
+<ui:Label class="star" text="★"/>
+<ui:Label class="star" text="☆"/>
+</ui:VisualElement>
+</ui:VisualElement>
+</ui:VisualElement>
+</ui:VisualElement>
+</ui:VisualElement>
+</ui:UXML>

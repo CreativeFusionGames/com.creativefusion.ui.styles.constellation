@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ui:UXML xmlns:ui="UnityEngine.UIElements">
-  <!-- 
-    CosmicElements Main Menu Layout
-    Required element names:
-      - start-button
-      - continue-button
-      - options-button
-      - extras-button
-      - quit-button
-  -->
-  <ui:VisualElement name="main-menu-root" class="cosmicelements-screen layout-column">
-    
-    <!-- Background layer -->
-    <ui:VisualElement name="background" class="cosmicelements-background" />
+<ui:VisualElement class="cosmicelements-screen layout-column">
+<ui:VisualElement class="cosmicelements-background"/>
 
-    <!-- Foreground frame -->
-    <ui:VisualElement name="menu-frame" class="cosmicelements-frame layout-column main-menu-screen">
-      
-      <!-- Title block -->
-      <ui:Label name="game-title" class="cosmicelements-title" text="CosmicElements" />
-      <ui:Label name="game-subtitle" class="cosmicelements-subtitle" text="Chart your way through the cosmos" />
 
-      <!-- Menu buttons -->
-      <ui:VisualElement name="menu-container" class="menu-button-group layout-column">
-        <ui:Button name="start-button" class="menu-button" text="Start New Journey" />
-        <ui:Button name="continue-button" class="menu-button" text="Continue" />
-        <ui:Button name="options-button" class="menu-button" text="Options" />
-        <ui:Button name="extras-button" class="menu-button" text="Extras" />
-        <ui:Button name="quit-button" class="menu-button menu-button--secondary" text="Quit" />
-      </ui:VisualElement>
+<ui:VisualElement class="cosmicelements-frame layout-column responsive-pad" name="menu-frame">
+<ui:VisualElement class="header layout-column gap-8">
+<ui:Label class="ce-title-lg" text="Main Hub"/>
+<ui:Label class="ce-subtitle" text="Welcome back, Voyager"/>
+</ui:VisualElement>
 
-    </ui:VisualElement>
-  </ui:VisualElement>
+
+<ui:VisualElement class="layout-row gap-8">
+<ui:Label class="badge" text="Lv 18"/>
+<ui:Label class="badge" text="120 / 150 Energy"/>
+<ui:Label class="badge right" text="Event: Prism Rift"/>
+</ui:VisualElement>
+
+
+<ui:VisualElement class="layout-column gap-12" name="menu-container">
+<ui:Button name="continue-button" class="btn btn--primary" text="Continue: Crystal Caverns"/>
+<ui:Button name="modes-button" class="btn" text="Game Modes"/>
+<ui:Button name="leaderboards-button" class="btn" text="Leaderboards"/>
+<ui:Button name="marketplace-button" class="btn" text="Marketplace"/>
+<ui:Button name="achievements-button" class="btn" text="Achievements"/>
+</ui:VisualElement>
+
+
+<ui:VisualElement class="menu-footer">
+<ui:Button name="audio-button" class="icon-button active" text="🔊"/>
+<ui:Button name="vibration-button" class="icon-button" text="📳"/>
+<ui:Button name="settings-button" class="icon-button" text="⚙"/>
+</ui:VisualElement>
+</ui:VisualElement>
+</ui:VisualElement>
 </ui:UXML>

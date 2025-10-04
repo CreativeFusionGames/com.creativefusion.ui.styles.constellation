@@ -1,0 +1,6 @@
+
+
+#splash-frame { max-width: 540px; }
+.progress-wrap { height: 12px; background-color: rgba(255,255,255,0.10); border-radius: 8px; }
+.progress-bar { height: 100%; width: 72%; background-image: linear-gradient(90deg, var(--ce-accent-a), var(--ce-accent-b)); border-radius: 8px; }
+

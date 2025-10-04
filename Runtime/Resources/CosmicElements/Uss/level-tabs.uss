@@ -1,0 +1,5 @@
+
+
+#tabs-frame { max-width: 900px; }
+.level-tile { width: 30%; min-width: 160px; }
+.level-tile.centered { align-items: center; }

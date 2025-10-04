@@ -1,7 +1,0 @@
-.cosmicelements-frame .cosmicelements-input {
-    max-width: 360px;
-}
-
-.cosmicelements-frame .form-button-row {
-    justify-content: flex-end;
-}
