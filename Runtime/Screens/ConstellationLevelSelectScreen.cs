@@ -21,11 +21,11 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
         /// <inheritdoc />
         protected override void OnInitialize()
         {
+            base.OnInitialize();
             CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("LevelSelect"), StylePaths);
             ConfigureItemTemplate(
                 CosmicElementsScreenUtility.CreateTemplateFactory(LevelTemplatePath),
                 BindLevelItem);
-            base.OnInitialize();
         }
 
         private static void BindLevelItem(VisualElement element, LevelEntryViewModel level)

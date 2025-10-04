@@ -6,7 +6,7 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
     /// <summary>
     /// CosmicElements-themed implementation of the <see cref="StartScreen"/> visuals.
     /// </summary>
-    public sealed class CosmicElementsStartScreen : StartScreen
+    public class CosmicElementsStartScreen : StartScreen
     {
         private static readonly string[] StylePaths =
         {
@@ -18,8 +18,8 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
         /// <inheritdoc />
         protected override void OnInitialize()
         {
-            CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("Start"), StylePaths);
             base.OnInitialize();
+            CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("Start"), StylePaths);
         }
     }
 }

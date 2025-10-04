@@ -22,13 +22,13 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
         /// <inheritdoc />
         protected override void OnInitialize()
         {
+            base.OnInitialize();
             CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("Shop"), StylePaths);
             ConfigureTemplates(
                 CosmicElementsScreenUtility.CreateTemplateFactory(CategoryTemplatePath),
                 BindCategory,
                 CosmicElementsScreenUtility.CreateTemplateFactory(ItemTemplatePath),
                 BindItem);
-            base.OnInitialize();
         }
 
         private static void BindCategory(VisualElement element, ShopCategoryViewModel category)

@@ -17,8 +17,8 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
         /// <inheritdoc />
         protected override void OnInitialize()
         {
-            CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("MainMenu"), StylePaths);
             base.OnInitialize();
+            CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("MainMenu"), StylePaths);
         }
     }
 }
