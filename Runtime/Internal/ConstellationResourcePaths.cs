@@ -13,6 +13,7 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Internal
         private const string StyleRoot = Root + "/Uss";
         private const string ConfigRoot = Root + "/Configs";
 
+
         /// <summary>
         /// Gets the resource path for a screen layout without file extension.
         /// </summary>
