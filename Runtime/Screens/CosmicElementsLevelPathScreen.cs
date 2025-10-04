@@ -4,6 +4,7 @@ using CreativeFusion.Ui.Styles.CosmicElements.Internal;
 
 namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
 {
+[UIScreen(CosmicElementsScreenIds.LevelPath)]
 public class CosmicElementsLevelPathScreen : UIScreen
 {
 private static readonly string[] StylePaths =

@@ -20,6 +20,7 @@
 
 <ui:VisualElement class="layout-column gap-12" name="menu-container">
 <ui:Button name="continue-button" class="btn btn--primary" text="Continue: Crystal Caverns"/>
+<ui:Button name="start-button" class="btn btn--primary" text="Level Select" />
 <ui:Button name="modes-button" class="btn" text="Game Modes"/>
 <ui:Button name="leaderboards-button" class="btn" text="Leaderboards"/>
 <ui:Button name="marketplace-button" class="btn" text="Marketplace"/>

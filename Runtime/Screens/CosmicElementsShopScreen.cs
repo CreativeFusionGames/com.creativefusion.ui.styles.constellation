@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 
 namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
 {
+[UIScreen(CosmicElementsScreenIds.Shop)]
 public class CosmicElementsShopScreen : UIScreen
 {
 private static readonly string[] StylePaths =

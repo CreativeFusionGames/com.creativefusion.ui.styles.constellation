@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="cosmicelements-screen layout-column">
+    <ui:VisualElement class="cosmicelements-background"/>
+    <ui:VisualElement class="cosmicelements-frame layout-column responsive-pad gap-12">
+      <ui:Label class="ce-title-lg" text="New Screen"/>
+      <!-- your content -->
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

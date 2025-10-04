@@ -18,14 +18,26 @@ MonoBehaviour:
       CreativeFusion.Ui.Styles.CosmicElements
     _cacheInstance: 1
   - _screenId: level-select
-    _screenTypeName: CreativeFusion.Ui.Styles.CosmicElements.Screens.CosmicElementsLevelSelectScreen,
+    _screenTypeName: CreativeFusion.Ui.Styles.CosmicElements.Screens.CosmicElementsLevelGridScreen,
       CreativeFusion.Ui.Styles.CosmicElements
     _cacheInstance: 1
-  - _screenId: start
-    _screenTypeName: CreativeFusion.Ui.Styles.CosmicElements.Screens.CosmicElementsStartScreen,
+  - _screenId: level-grid
+    _screenTypeName: CreativeFusion.Ui.Styles.CosmicElements.Screens.CosmicElementsLevelGridScreen,
+      CreativeFusion.Ui.Styles.CosmicElements
+    _cacheInstance: 1
+  - _screenId: level-tabs
+    _screenTypeName: CreativeFusion.Ui.Styles.CosmicElements.Screens.CosmicElementsLevelTabsScreen,
+      CreativeFusion.Ui.Styles.CosmicElements
+    _cacheInstance: 1
+  - _screenId: level-path
+    _screenTypeName: CreativeFusion.Ui.Styles.CosmicElements.Screens.CosmicElementsLevelPathScreen,
       CreativeFusion.Ui.Styles.CosmicElements
     _cacheInstance: 1
   - _screenId: shop
     _screenTypeName: CreativeFusion.Ui.Styles.CosmicElements.Screens.CosmicElementsShopScreen,
+      CreativeFusion.Ui.Styles.CosmicElements
+    _cacheInstance: 1
+  - _screenId: splash-loading
+    _screenTypeName: CreativeFusion.Ui.Styles.CosmicElements.Screens.CosmicElementsSplashLoadingScreen,
       CreativeFusion.Ui.Styles.CosmicElements
     _cacheInstance: 1
