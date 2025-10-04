@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <!-- 
+    CosmicElements Main Menu Layout
+    Required element names:
+      - start-button
+      - continue-button
+      - options-button
+      - extras-button
+      - quit-button
+  -->
+  <ui:VisualElement name="main-menu-root" class="cosmicelements-screen layout-column">
+    
+    <!-- Background layer -->
+    <ui:VisualElement name="background" class="cosmicelements-background" />
+
+    <!-- Foreground frame -->
+    <ui:VisualElement name="menu-frame" class="cosmicelements-frame layout-column main-menu-screen">
+      
+      <!-- Title block -->
+      <ui:Label name="game-title" class="cosmicelements-title" text="CosmicElements" />
+      <ui:Label name="game-subtitle" class="cosmicelements-subtitle" text="Chart your way through the cosmos" />
+
+      <!-- Menu buttons -->
+      <ui:VisualElement name="menu-container" class="menu-button-group layout-column">
+        <ui:Button name="start-button" class="menu-button" text="Start New Journey" />
+        <ui:Button name="continue-button" class="menu-button" text="Continue" />
+        <ui:Button name="options-button" class="menu-button" text="Options" />
+        <ui:Button name="extras-button" class="menu-button" text="Extras" />
+        <ui:Button name="quit-button" class="menu-button menu-button--secondary" text="Quit" />
+      </ui:VisualElement>
+
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

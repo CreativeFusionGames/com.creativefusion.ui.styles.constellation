@@ -1,0 +1,91 @@
+.level-list,
+.item-list,
+.category-list {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgba(124, 93, 250, 0.2);
+    border-right-color: rgba(124, 93, 250, 0.2);
+    border-top-color: rgba(124, 93, 250, 0.2);
+    border-bottom-color: rgba(124, 93, 250, 0.2);
+    padding: 12px;
+}
+
+.level-list {
+    min-height: 260px;
+}
+
+.category-list {
+    width: 220px;
+}
+
+.level-preview,
+.item-inspector {
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    padding: 18px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgba(124, 93, 250, 0.2);
+    border-right-color: rgba(124, 93, 250, 0.2);
+    border-top-color: rgba(124, 93, 250, 0.2);
+    border-bottom-color: rgba(124, 93, 250, 0.2);
+    gap: 10px;
+}
+
+.level-select-grid,
+.shop-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+}
+
+.shop-items {
+    flex-grow: 1;
+    gap: 16px;
+}
+
+.shop-item__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unity-list-view__item:hover .list-item {
+    border-left-color: rgba(124, 93, 250, 0.55);
+    border-right-color: rgba(124, 93, 250, 0.55);
+    border-top-color: rgba(124, 93, 250, 0.55);
+    border-bottom-color: rgba(124, 93, 250, 0.55);
+}
+
+.unity-list-view__item:focus .list-item {
+    border-left-color: rgba(124, 93, 250, 0.8);
+    border-right-color: rgba(124, 93, 250, 0.8);
+    border-top-color: rgba(124, 93, 250, 0.8);
+    border-bottom-color: rgba(124, 93, 250, 0.8);
+}
+
+.unity-list-view__item:focus .list-item::unity-selection-decoration {
+    background-color: transparent;
+}
+
+.unity-list-view__item:focus-visible .list-item {
+    border-left-color: rgba(83, 222, 238, 0.7);
+    border-right-color: rgba(83, 222, 238, 0.7);
+    border-top-color: rgba(83, 222, 238, 0.7);
+    border-bottom-color: rgba(83, 222, 238, 0.7);
+}
+
+.unity-list-view__item[data-selected="true"] .list-item {
+    background-color: rgba(124, 93, 250, 0.25);
+    border-left-color: rgba(124, 93, 250, 0.6);
+    border-right-color: rgba(124, 93, 250, 0.6);
+    border-top-color: rgba(124, 93, 250, 0.6);
+    border-bottom-color: rgba(124, 93, 250, 0.6);
+}
