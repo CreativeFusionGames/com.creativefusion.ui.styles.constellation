@@ -21,9 +21,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: radial-gradient(circle at 20% -10%, rgba(124, 93, 250, 0.45), transparent 55%),
-        radial-gradient(circle at 80% 10%, rgba(83, 222, 238, 0.35), transparent 60%),
-        linear-gradient(160deg, #050b1a, #0e1631 55%, #060913);
+    background-color: #050b1a;
     opacity: 0.85;
     pointer-events: none;
 }
@@ -34,6 +32,7 @@
     padding: 32px;
     border-radius: 18px;
     background-color: var(--cosmicelements-surface);
+    background-image: radial-gradient(circle at 50% 50%, rgba(124, 93, 250, 0.15), transparent 70%);
     border-left-width: 1px;
     border-right-width: 1px;
     border-top-width: 1px;
@@ -80,6 +79,7 @@
     border-bottom-width: 0;
     color: white;
     background-color: var(--cosmicelements-primary);
+    background-image: linear-gradient(135deg, rgba(124, 93, 250, 0.9), rgba(83, 222, 238, 0.7));
     unity-font-style: bold;
     letter-spacing: 1px;
     transition-duration: 200ms;
@@ -88,6 +88,7 @@
 .form-button:hover,
 .menu-button:hover {
     background-color: var(--cosmicelements-primary-bright);
+    background-image: linear-gradient(135deg, rgba(168, 140, 255, 0.95), rgba(112, 238, 252, 0.85));
 }
 
 .form-button:disabled,
