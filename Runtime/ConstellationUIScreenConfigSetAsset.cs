@@ -75,7 +75,14 @@ namespace CreativeFusion.Ui.Styles.CosmicElements
             private string _screenTypeName;
 
             [SerializeField]
-            private bool _cacheInstance = true;
+            private bool _cacheInstance;
+
+            public ScreenEntry()
+            {
+                _screenId = string.Empty;
+                _screenTypeName = string.Empty;
+                _cacheInstance = true;
+            }
 
             public string ScreenId => _screenId;
 

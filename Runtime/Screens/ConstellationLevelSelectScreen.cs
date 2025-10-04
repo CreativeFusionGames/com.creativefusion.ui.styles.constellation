@@ -7,7 +7,7 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
     /// <summary>
     /// CosmicElements-themed implementation of the <see cref="LevelSelectScreen"/> visuals.
     /// </summary>
-    public sealed class CosmicElementsLevelSelectScreen : LevelSelectScreen
+    public class CosmicElementsLevelSelectScreen : LevelSelectScreen
     {
         private static readonly string[] StylePaths =
         {

@@ -6,7 +6,7 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
     /// <summary>
     /// CosmicElements-themed implementation of the <see cref="MainMenuScreen"/> visuals.
     /// </summary>
-    public sealed class CosmicElementsMainMenuScreen : MainMenuScreen
+    public class CosmicElementsMainMenuScreen : MainMenuScreen
     {
         private static readonly string[] StylePaths =
         {

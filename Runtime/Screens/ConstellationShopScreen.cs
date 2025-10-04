@@ -7,7 +7,7 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
     /// <summary>
     /// CosmicElements-themed implementation of the <see cref="ShopScreen"/> visuals.
     /// </summary>
-    public sealed class CosmicElementsShopScreen : ShopScreen
+    public class CosmicElementsShopScreen : ShopScreen
     {
         private static readonly string[] StylePaths =
         {
