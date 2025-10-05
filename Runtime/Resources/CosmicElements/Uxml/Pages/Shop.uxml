@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Organisms/StoreProductCard.uxml" name="Card" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="Marketplace" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Bundles, cosmetics, and boosts" /></ui:Instance>
+    <ui:VisualElement class="content">
+      <ui:VisualElement class="grid-2">
+        <ui:Instance template="Card">
+          <ui:AttributeOverride element-name="Title" attribute-name="text" value="Starter Bundle" />
+          <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="500 Shards + 50 Gems + Epic Cache" />
+          <ui:AttributeOverride element-name="Tag" attribute-name="text" value="-30%" />
+          <ui:AttributeOverride element-name="PriceText" attribute-name="text" value="£3.99" />
+          <ui:AttributeOverride element-name="PriceBtn" attribute-name="class" value="btn btn--small btn--primary" />
+        </ui:Instance>
+        <ui:Instance template="Card">
+          <ui:AttributeOverride element-name="Title" attribute-name="text" value="Shard Crate" />
+          <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="5,000 Shards" />
+          <ui:AttributeOverride element-name="Tag" attribute-name="text" value="Best Value" />
+          <ui:AttributeOverride element-name="PriceText" attribute-name="text" value="£4.99" />
+        </ui:Instance>
+        <ui:Instance template="Card">
+          <ui:AttributeOverride element-name="Title" attribute-name="text" value="Cosmetic — Prism Cape" />
+          <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Legendary trail effect" />
+          <ui:AttributeOverride element-name="Tag" attribute-name="text" value="" />
+          <ui:AttributeOverride element-name="PriceText" attribute-name="text" value="800 Gems" />
+        </ui:Instance>
+        <ui:Instance template="Card">
+          <ui:AttributeOverride element-name="Title" attribute-name="text" value="Energy Refill" />
+          <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Instantly restore" />
+          <ui:AttributeOverride element-name="PriceText" attribute-name="text" value="80 Gems" />
+        </ui:Instance>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

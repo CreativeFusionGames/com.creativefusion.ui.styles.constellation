@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Organisms/AchievementItem.uxml" name="Achv" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header">
+      <ui:AttributeOverride element-name="Title" attribute-name="text" value="Achievements" />
+      <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Milestones of your journey" />
+    </ui:Instance>
+    <ui:VisualElement class="content vstack">
+      <ui:Instance template="Achv">
+        <ui:AttributeOverride element-name="Title" attribute-name="text" value="Shard Hoarder" />
+        <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Collect 10,000 shards." />
+      </ui:Instance>
+      <ui:Instance template="Achv">
+        <ui:AttributeOverride element-name="Title" attribute-name="text" value="Untouchable" />
+        <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Complete a stage without taking damage." />
+      </ui:Instance>
+      <ui:Instance template="Achv">
+        <ui:AttributeOverride element-name="Title" attribute-name="text" value="Combo Master" />
+        <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Achieve a x25 combo." />
+      </ui:Instance>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Organisms/ProfileStatsGrid.uxml" name="Stats" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="Player Profile" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Overview of performance" /></ui:Instance>
+    <ui:VisualElement class="content">
+      <ui:VisualElement class="panel vstack">
+        <ui:VisualElement class="hstack" style="justify-content:space-between;">
+          <ui:VisualElement><ui:Label class="title-lg" text="Aria" /><ui:Label class="subtitle" text="Voyager • Lv 18" /></ui:VisualElement>
+          <ui:Label class="badge" text="⏱ Playtime 14h 22m" />
+        </ui:VisualElement>
+        <ui:VisualElement class="sep" />
+        <ui:Instance template="Stats" />
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,9 @@
+/* Hud */
+.hud { position: absolute; left: 0; right: 0; top: 0; bottom: 0; padding: 16px; }
+.hud-top, .hud-bottom { display:flex; flex-direction: row; justify-content: space-between; }
+.hud-chip { background-color: rgba(0,0,0,0.35); color: var(--c-text); border-radius: 10px; padding-left: 8px; padding-right: 8px; padding-top: 6px; padding-bottom: 6px; }
+
+/* Leaderboard rows */
+.tr { display:flex; flex-direction: row; align-items:center; justify-content: space-between; }
+.tr .cell { padding-left: 10px; padding-right: 10px; padding-top: 8px; padding-bottom: 8px; }
+.tr.panel { padding: 0; }

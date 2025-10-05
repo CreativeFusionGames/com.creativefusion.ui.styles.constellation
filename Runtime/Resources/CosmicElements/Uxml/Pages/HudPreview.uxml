@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Organisms/Hud.uxml" name="Hud" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="In-Game HUD" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Heads-up display elements" /></ui:Instance>
+    <ui:Instance template="Hud" />
+  </ui:VisualElement>
+</ui:UXML>

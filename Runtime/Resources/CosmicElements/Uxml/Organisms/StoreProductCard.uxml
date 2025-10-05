@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="card vstack" name="StoreProductCard">
+    <ui:Label name="Title" text="Product" />
+    <ui:Label class="subtitle" name="Subtitle" text="Details" />
+    <ui:VisualElement class="hstack">
+      <ui:Label class="badge" name="Tag" text="Tag" />
+      <ui:Button class="btn btn--small" name="PriceBtn"><ui:Label name="PriceText" text="$0.00" /></ui:Button>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

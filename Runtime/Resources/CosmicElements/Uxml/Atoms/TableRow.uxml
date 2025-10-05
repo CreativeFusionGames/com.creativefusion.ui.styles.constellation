@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="panel tr" name="TableRow">
+    <ui:VisualElement class="cell" name="CellLeft">
+      <ui:Label text="Left" />
+      <ui:Label class="subtitle" text="Sub" />
+    </ui:VisualElement>
+    <ui:VisualElement class="cell" name="CellRight">
+      <ui:Label text="Value" />
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

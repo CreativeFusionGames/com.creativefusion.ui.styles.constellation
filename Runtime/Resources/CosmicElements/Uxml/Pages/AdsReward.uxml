@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Atoms/Button.uxml" name="Btn" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header">
+      <ui:AttributeOverride element-name="Title" attribute-name="text" value="Earn via Ad" />
+      <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Watch an ad to receive rewards" />
+    </ui:Instance>
+    <ui:VisualElement class="content centered vstack">
+      <ui:VisualElement class="panel vstack centered" style="padding:18px; width:85%;">
+        <ui:Label class="title-lg" text="Watch 30s Ad" />
+        <ui:Label class="subtitle" text="Get 50 Shards or 5 Gems" />
+        <ui:VisualElement class="hstack">
+          <ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--primary" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Watch Now" /></ui:Instance>
+          <ui:Instance template="Btn"><ui:AttributeOverride element-name="Text" attribute-name="text" value="No Thanks" /></ui:Instance>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="panel vstack" style="padding:14px; width:85%;">
+        <ui:VisualElement class="hstack" style="justify-content:space-between;">
+          <ui:Label class="kicker" text="Recent Rewards" />
+          <ui:Label class="kicker" text="Today" />
+        </ui:VisualElement>
+        <ui:VisualElement class="vstack" style="margin-top:8px;">
+          <ui:VisualElement class="hstack" style="justify-content:space-between;">
+            <ui:Label class="subtitle" text="+50 Shards" />
+            <ui:Label class="kicker" text="00:12 ago" />
+          </ui:VisualElement>
+          <ui:VisualElement class="hstack" style="justify-content:space-between;">
+            <ui:Label class="subtitle" text="+5 Gems" />
+            <ui:Label class="kicker" text="1h ago" />
+          </ui:VisualElement>
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

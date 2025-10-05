@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="hud-chip hstack" name="HudChip">
+    <ui:Label name="Icon" class="icon" />
+    <ui:Label name="Text" text="Chip" />
+  </ui:VisualElement>
+</ui:UXML>

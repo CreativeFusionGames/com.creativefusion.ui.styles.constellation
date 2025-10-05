@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Organisms/QuestItem.uxml" name="Quest" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="Quests" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Complete tasks to earn shards and gems" /></ui:Instance>
+    <ui:VisualElement class="content vstack">
+      <ui:Instance template="Quest">
+        <ui:AttributeOverride element-name="Title" attribute-name="text" value="Win 3 stages" />
+        <ui:AttributeOverride element-name="ProgressText" attribute-name="text" value="Progress: 2 / 3" />
+        <ui:AttributeOverride element-name="Reward" attribute-name="text" value="+120 Shards" />
+      </ui:Instance>
+      <ui:Instance template="Quest">
+        <ui:AttributeOverride element-name="Title" attribute-name="text" value="Perform a x10 combo" />
+        <ui:AttributeOverride element-name="ProgressText" attribute-name="text" value="Progress: 6 / 10" />
+        <ui:AttributeOverride element-name="Reward" attribute-name="text" value="+40 Gems" />
+      </ui:Instance>
+      <ui:Instance template="Quest">
+        <ui:AttributeOverride element-name="Title" attribute-name="text" value="Clear a Rift without damage" />
+        <ui:AttributeOverride element-name="ProgressText" attribute-name="text" value="Progress: 0 / 1" />
+        <ui:AttributeOverride element-name="Reward" attribute-name="text" value="Epic Cache" />
+      </ui:Instance>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Organisms/LevelPath.uxml" name="Path" />
+  <ui:Template src="../Atoms/StarsRow.uxml" name="Stars" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="Level Select — Path" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Progress along the rift line" /></ui:Instance>
+    <ui:VisualElement class="content" style="justify-content:flex-start; padding-top:0;">
+      <ui:Instance template="Path" />
+      <ui:VisualElement class="section centered">
+        <ui:Label class="kicker" text="Dimension 5" />
+        <ui:Label class="title-lg" text="Crystal Caverns" />
+        <ui:Instance template="Stars" />
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

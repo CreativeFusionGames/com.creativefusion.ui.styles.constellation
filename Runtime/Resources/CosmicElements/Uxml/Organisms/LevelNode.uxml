@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Label class="level-node" name="LevelNode" text="1" />
+</ui:UXML>

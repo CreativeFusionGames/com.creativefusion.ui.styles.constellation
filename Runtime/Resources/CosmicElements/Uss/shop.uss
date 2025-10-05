@@ -1,7 +1,7 @@
 #shop-frame { max-width: 900px; }
 .shop-list { row-gap: 12px; }
 .shop-card { }
-.shop-card__title { -unity-font-style: bold; font-size: 15px; }
-.shop-card__subtitle { color: var(--ce-muted); font-size: 12px; }
+.shop-card__title { -unity-font-style: bold; font-style: bold; font-size: var(--font-size-md); }
+.shop-card__subtitle { color: var(--ce-muted); font-size: var(--font-size-sm); }
 .shop-card__row { display: flex; flex-direction: row; align-items: center; }
 

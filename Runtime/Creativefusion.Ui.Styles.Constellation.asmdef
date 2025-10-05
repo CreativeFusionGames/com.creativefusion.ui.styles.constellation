@@ -4,6 +4,7 @@
     "UnityEngine.CoreModule",
     "UnityEngine.UIElementsModule",
     "CreativeFusion.Ui.Core",
+    "CreativeFusion.Resources",
     "CreativeFusion.Ui.Screens"
   ],
   "includePlatforms": [],

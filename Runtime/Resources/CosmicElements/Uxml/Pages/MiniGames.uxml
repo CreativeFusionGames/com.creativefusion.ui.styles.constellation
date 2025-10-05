@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Atoms/Button.uxml" name="Btn" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="Mini-Games" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Break the loop with side challenges" /></ui:Instance>
+    <ui:VisualElement class="content">
+      <ui:VisualElement class="grid-2">
+        <ui:VisualElement class="card vstack"><ui:Label text="Shard Sprint" /><ui:Label class="subtitle" text="Collect as many as you can in 60s" /><ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small btn--primary" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Play" /></ui:Instance></ui:VisualElement>
+        <ui:VisualElement class="card vstack"><ui:Label text="Rift Puzzle" /><ui:Label class="subtitle" text="Route energy to stabilizers" /><ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Play" /></ui:Instance></ui:VisualElement>
+        <ui:VisualElement class="card vstack"><ui:Label text="Target Trials" /><ui:Label class="subtitle" text="Precision taps to score" /><ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Play" /></ui:Instance></ui:VisualElement>
+        <ui:VisualElement class="card vstack"><ui:Label text="Memory Lattice" /><ui:Label class="subtitle" text="Remember the sequence" /><ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Play" /></ui:Instance></ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

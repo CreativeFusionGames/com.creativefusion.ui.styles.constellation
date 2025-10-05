@@ -3,5 +3,5 @@
 #grid-frame { max-width: 720px; }
 .level-card { width: 30%; min-width: 160px; }
 .level-card.centered { align-items: center; }
-.level-card .ce-title-lg { font-size: 20px; }
+.level-card .ce-title-lg { font-size: var(--font-size-lg); }
 .stars { display: flex; }

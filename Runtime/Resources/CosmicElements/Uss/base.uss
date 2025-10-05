@@ -1,100 +1,312 @@
+/* Cosmic Elements — base.uss
+   Covers the common tokens used across all pages.
+   Place at: Resources/CosmicElements/Uss/base.uss
+*/
+
+/* ---------- Theme tokens (fallbacks) ---------- */
+
+@font-face {
+    font-family: "MyCustomFont";
+    src: resource("Fonts/MyCustomFont");
+}
+
+:root {
+    --c-bg: #0a0e27;
+    --c-panel: rgba(255,255,255,0.08);
+    --c-panel-border: rgba(255,255,255,0.12);
+    --c-text: #ffffff;
+    --c-text-muted: rgba(255,255,255,0.75);
+    --c-text-kicker: rgba(255,255,255,0.6);
+    --c-primary: #667eea;
+    --c-primary-2: #764ba2;
+    --c-accent: #43cea2;
+    --c-accent-2: #185a9d;
+    --c-warning: #ffc107;
+    
+    /* Typography tokens */
+    
+    /* --- Unity & System Fonts --- */
+    /* --font-family-default: var(--unity-default-font); */ /* Unity default font (e.g., Arial or Liberation Sans) */
+    /* --font-family-default: "Arial", sans-serif; */
+    /* --font-family-default: "Helvetica Neue", Helvetica, sans-serif; */
+    /* --font-family-default: "Segoe UI", sans-serif; */ /* Windows-friendly, clean for mobile */
+    /* --font-family-default: "SF Pro Display", "San Francisco", sans-serif; */ /* iOS/macOS look */
+
+    /* --- Clean & Readable (UI / HUD) --- */
+    /* --font-family-default: "Roboto", sans-serif; */ /* Modern, highly legible */
+    /* --font-family-default: "Open Sans", sans-serif; */ /* Great for menus */
+    /* --font-family-default: "Noto Sans", sans-serif; */ /* Best for localization */
+    /* --font-family-default: "Lato", sans-serif; */ /* Slightly rounded, balanced */
+    /*  --font-family-default: "Inter", sans-serif; */  /* Optimized for screen readability */
+     --font-family-default: "MyCustomFont";
+
+    /* --- Stylized / Fun --- */
+    /* --font-family-default: "Fredoka One", cursive; */ /* Friendly, round for casual games */
+    /* --font-family-default: "Baloo 2", cursive; */ /* Bold, playful */
+    /* --font-family-default: "Bangers", cursive; */ /* Comic-style, energetic */
+    /* --font-family-default: "Luckiest Guy", cursive; */ /* Great for title text */
+
+    /* --- Fantasy / Adventure --- */
+    /* --font-family-default: "Cinzel", serif; */ /* Elegant and cinematic */
+    /* --font-family-default: "Uncial Antiqua", serif; */ /* Medieval feel */
+    /* --font-family-default: "IM Fell English SC", serif; */ /* Vintage / book-style */
+    /* --font-family-default: "Cormorant Garamond", serif; */ /* Classic elegance */
+
+    /* --- Sci-Fi / Tech / Horror --- */
+    /* --font-family-default: "Orbitron", sans-serif; */ /* Futuristic */
+    /* --font-family-default: "Share Tech Mono", monospace; */ /* Sci-fi console style */
+    /* --font-family-default: "Exo 2", sans-serif; */ /* Clean modern tech */
+    /* --font-family-default: "Creepster", cursive; */ /* Spooky / Halloween style */
+
+    --font-size-xs: 11px;
+    --font-size-sm: 12px;
+    --font-size-base: 14px;
+    --font-size-md: 15px;
+    --font-size-lg: 18px;
+    --font-size-xl: 22px;
+    --font-size-2xl: 28px;
+    --font-size-3xl: 32px;
+}
+/* ---------- Layout helpers ---------- */
 .cosmicelements-screen-root,
 .cosmicelements-screen,
-.unity-ui-document__root {
-    width: 100%;
-    height: 100%;
+.cosmicelements-frame,
+.screen {
+    -unity-text-align: upper-left;
+    text-align: left;
     flex-grow: 1;
     flex-direction: column;
-    background-color: #0a0e27;
+    width: 100%;
+    height: 100%;
+    color: var(--c-text);
+    background-color: var(--c-bg);
 }
 
-.cosmicelements-screen {
-    outline: 2px solid lime;
+.layout-column { flex-direction: column; }
+.layout-row    { flex-direction: row; }
+.right         { margin-left: auto; }
+
+.section {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
-
-.cosmicelements-screen { flex-grow: 1; }
-.cosmicelements-frame { flex-grow: 1; }
-#menu-container { flex-grow: 1; }       /* center stack grows */
-.menu-footer { margin-top: auto; }      /* footer sticks to bottom */
-.btn > .unity-button__text,
-.icon-button > .unity-button__text {
-  color: white;
-  -unity-font-style: bold;
+.content {
+    flex-grow: 1;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
+/* ---------- Background overlay (simple) ---------- */
 .cosmicelements-background {
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
-    background-color: #0a0e27;
+    background-color: var(--c-bg);
+    opacity: 1;
 }
 
-.cosmicelements-frame {
-    flex-grow: 1;                        /* <— lets content fill remaining space */
-    flex-direction: column;
-    padding-top: 32px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-
-/* Header */
-.header { flex-direction: column; padding-bottom: 8px; }
-.ce-title-lg { font-size: 24px; -unity-font-style: bold; color: white; }   /* note the leading '-' */
-.ce-subtitle { font-size: 14px; color: rgba(255,255,255,0.75); }
-
-/* Badges */
-.badge {
-    border-radius: 12px;
-    padding-top: 4px; padding-bottom: 4px;
-    padding-left: 8px; padding-right: 8px;
-    font-size: 11px; -unity-font-style: bold;
-    color: white;
-    border-width: 1px; border-color: rgba(255,255,255,0.12);
-    background-color: rgba(255,255,255,0.12);
-}
-.right { margin-left: auto; }
-
-/* Buttons (stack) */
-.btn {
-    flex-direction: row; justify-content: center; align-items: center;
-    min-height: 52px;
-    margin-top: 10px;                    /* spacing between items */
-    padding-top: 12px; padding-bottom: 12px;
-    border-radius: 16px;
-    border-width: 1px; border-color: rgba(255,255,255,0.12);
-    background-color: rgba(255,255,255,0.08);
-}
-.btn--primary { background-color: #667eea; border-width: 0; }
-
-/* Ensure button text is visible (theme-proof) */
-.btn > .unity-button__text {
-    color: white;
-    font-size: 14px;
+/* ---------- Typography ---------- */
+.title-xl {
+    -unity-font-definition: var(--font-family-default);
+    font-size: var(--font-size-3xl);
     -unity-font-style: bold;
+    font-style: bold;
+    color: var(--c-text);
+    letter-spacing: -0.5px;
+}
+.title-lg {
+    -unity-font-definition: var(--font-family-default);
+    font-size: var(--font-size-xl);
+    -unity-font-style: bold;
+    font-style: bold;
+    color: var(--c-text);
+}
+.subtitle, .ce-subtitle {
+    -unity-font-definition: var(--font-family-default);
+    font-size: var(--font-size-base);
+    color: var(--c-text-muted);
+}
+.kicker {
+    -unity-font-definition: var(--font-family-default);
+    font-size: var(--font-size-sm);
+    color: var(--c-text-kicker);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.body, .text-base {
+    -unity-font-definition: var(--font-family-default);
+    font-size: var(--font-size-base);
+    color: var(--c-text);
+}
+.text-sm {
+    -unity-font-definition: var(--font-family-default);
+    font-size: var(--font-size-sm);
+    color: var(--c-text);
 }
 
-/* Footer pinned to bottom of the frame */
-.menu-footer {
-    flex-direction: row; justify-content: space-between; align-items: center;
-    margin-top: auto;                    /* <— pushes footer down */
-    padding-left: 20px; padding-right: 20px; padding-bottom: 20px;
+/* ---------- Header ---------- */
+.header {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    padding-bottom: 8px;
+}
+.header .title-lg { margin-bottom: 4px; }
+
+/* ---------- Stacks ---------- */
+.vstack { flex-direction: column; }
+.hstack { flex-direction: row; align-items: center; }
+
+/* add spacing between children without relying on gap (for broad Unity support) */
+.vstack > * { margin-top: 10px; }
+.vstack > *:first-child { margin-top: 0; }
+.hstack > * { margin-right: 10px; }
+.hstack > *:last-child { margin-right: 0; }
+
+/* ---------- Panels & Cards ---------- */
+.panel, .card {
+    background-color: var(--c-panel);
+    border-left-color: var(--c-panel-border);
+    border-right-color: var(--c-panel-border);
+    border-top-color: var(--c-panel-border);
+    border-bottom-color: var(--c-panel-border);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--c-text);
 }
 
-.icon-button {
-    width: 48px; height: 48px; border-radius: 24px;
-    justify-content: center; align-items: center;
-    border-width: 1px; border-color: rgba(255,255,255,0.10);
+/* ---------- Buttons ---------- */
+.btn {
+    -unity-font-style: bold;
+    font-style: bold;
+    font-size: var(--font-size-base);
+    color: var(--c-text);
     background-color: rgba(255,255,255,0.10);
+    border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px;
+    border-left-color: rgba(255,255,255,0.10); border-right-color: rgba(255,255,255,0.10);
+    border-top-color: rgba(255,255,255,0.10);  border-bottom-color: rgba(255,255,255,0.10);
+    border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;
+    padding-left: 14px; padding-right: 14px; padding-top: 12px; padding-bottom: 12px;
+    margin-top: 6px; margin-bottom: 6px;
 }
-.icon-button.active { background-color: rgba(255,255,255,0.25); }
-.icon-button > .unity-button__text { color: white; -unity-font-style: bold; }
+.btn--small {
+    padding-left: 10px; padding-right: 10px; padding-top: 8px; padding-bottom: 8px;
+    -unity-font-style: normal;
+    font-style: normal;
+    font-size: var(--font-size-sm);
+}
+.btn--primary {
+    background-color: var(--c-primary);
+    border-left-color: var(--c-primary); border-right-color: var(--c-primary);
+    border-top-color: var(--c-primary);  border-bottom-color: var(--c-primary);
+}
 
-/* Layout helpers */
-.layout-column { flex-direction: column; }
-.layout-row { flex-direction: row; align-items: center; }
+/* Icon-ish circular buttons */
+.icon-button {
+    width: 48px; height: 48px;
+    background-color: rgba(255,255,255,0.10);
+    border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px;
+    border-left-color: rgba(255,255,255,0.10); border-right-color: rgba(255,255,255,0.10);
+    border-top-color: rgba(255,255,255,0.10);  border-bottom-color: rgba(255,255,255,0.10);
+    border-top-left-radius: 24px; border-top-right-radius: 24px; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px;
+    -unity-text-align: middle-center;
+    text-align: center;
+    color: var(--c-text);
+}
+.icon-button.active {
+    background-color: rgba(255,255,255,0.20);
+}
 
-/* Let the central button list take remaining space (no UXML edit needed) */
-#menu-container { flex-grow: 1; }
+/* ---------- Footer menu ---------- */
+.menu-footer {
+    padding-left: 20px; padding-right: 20px; padding-bottom: 16px; padding-top: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* ---------- Badges ---------- */
+.badge {
+    color: var(--c-text);
+    background-color: rgba(255,255,255,0.12);
+    border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px;
+    border-left-color: rgba(255,255,255,0.12); border-right-color: rgba(255,255,255,0.12);
+    border-top-color: rgba(255,255,255,0.12);  border-bottom-color: rgba(255,255,255,0.12);
+    padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px;
+    border-top-left-radius: 999px; border-top-right-radius: 999px; border-bottom-left-radius: 999px; border-bottom-right-radius: 999px;
+    -unity-font-style: bold;
+    font-style: bold;
+    font-size: var(--font-size-xs);
+}
+
+/* ---------- Lists / tables ---------- */
+.tr { flex-direction: row; align-items: center; justify-content: space-between; }
+.tr .cell { padding-left: 10px; padding-right: 10px; padding-top: 8px; padding-bottom: 8px; }
+.tr.panel { padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; }
+
+/* ---------- Grids (approx via flex-wrap) ---------- */
+.grid-3, .grid-2 {
+    flex-direction: row; flex-wrap: wrap; justify-content: space-between;
+}
+.grid-3 > * {
+    width: 32%;
+    margin-bottom: 8px;
+}
+.grid-2 > * {
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+/* ---------- ProgressBar theming ---------- */
+.progress {
+    height: 10px;
+}
+.progress .unity-progress-bar__background {
+    background-color: rgba(255,255,255,0.10);
+    border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;
+}
+.progress .unity-progress-bar__progress {
+    background-color: var(--c-accent);
+    border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;
+}
+
+/* ---------- Level path nodes ---------- */
+.level-node {
+    width: 64px; height: 64px;
+    -unity-text-align: middle-center;
+    text-align: center;
+    -unity-font-style: bold;
+    font-style: bold;
+    font-size: var(--font-size-lg);
+    color: var(--c-text);
+    background-color: rgba(255,255,255,0.10);
+    border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;
+    border-left-color: rgba(255,255,255,0.20); border-right-color: rgba(255,255,255,0.20);
+    border-top-color: rgba(255,255,255,0.20);  border-bottom-color: rgba(255,255,255,0.20);
+    border-top-left-radius: 32px; border-top-right-radius: 32px; border-bottom-left-radius: 32px; border-bottom-right-radius: 32px;
+}
+.level-node.completed { background-color: rgba(102,126,234,0.30); border-left-color: #667eea; border-right-color: #667eea; border-top-color: #667eea; border-bottom-color: #667eea; }
+.level-node.current   { background-color: #667eea; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; }
+.level-node.locked    { color: rgba(255,255,255,0.35); border-left-color: rgba(255,255,255,0.12); border-right-color: rgba(255,255,255,0.12); border-top-color: rgba(255,255,255,0.12); border-bottom-color: rgba(255,255,255,0.12); }
+
+/* ---------- Stars ---------- */
+.stars { flex-direction: row; }
+.star  { color: var(--c-warning); }
+
+/* ---------- Utilities ---------- */
+.sep { height: 1px; background-color: rgba(255,255,255,0.12); }
+.centered { align-items: center; justify-content: center; -unity-text-align: middle-center; text-align: center; }
+.muted { color: var(--c-text-muted); }

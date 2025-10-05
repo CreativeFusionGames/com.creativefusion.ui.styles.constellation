@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="hstack stars" name="StarsRow">
+    <ui:Label text="★" />
+    <ui:Label text="★" />
+    <ui:Label text="☆" />
+  </ui:VisualElement>
+</ui:UXML>

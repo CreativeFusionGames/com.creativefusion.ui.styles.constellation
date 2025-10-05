@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <!-- Placeholder wheel; custom shader/graphics can replace -->
+  <ui:VisualElement name="SpinWheel" style="width:220px; height:220px; border-left-width:8px; border-right-width:8px; border-top-width:8px; border-bottom-width:8px; border-left-color: rgba(255,255,255,0.15); border-right-color: rgba(255,255,255,0.15); border-top-color: rgba(255,255,255,0.15); border-bottom-color: rgba(255,255,255,0.15); border-radius:110px; background-color:#667eea;" />
+</ui:UXML>

@@ -1,0 +1,683 @@
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Internal\CosmicElementsResourcePaths.cs
+==================================================
+
+using System;
+
+namespace CreativeFusion.Ui.Styles.CosmicElements.Internal
+{
+    /// <summary>
+    /// Centralizes resource path construction for the CosmicElements UI theme.
+    /// </summary>
+    public static class CosmicElementsResourcePaths
+    {
+        private const string Root = "CosmicElements";
+        private const string LayoutRoot = Root + "/Uxml";
+        private const string TemplateRoot = LayoutRoot + "/Templates";
+        private const string StyleRoot = Root + "/Uss";
+        private const string ConfigRoot = Root + "/Configs";
+
+
+        /// <summary>
+        /// Gets the resource path for a screen layout without file extension.
+        /// </summary>
+        /// <param name="name">The UXML filename without extension.</param>
+        public static string Layout(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentException("Layout name cannot be null or whitespace.", nameof(name));
+            }
+
+            return LayoutRoot + "/" + name;
+        }
+
+        /// <summary>
+        /// Gets the resource path for an item template without file extension.
+        /// </summary>
+        /// <param name="name">The template filename without extension.</param>
+        public static string Template(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentException("Template name cannot be null or whitespace.", nameof(name));
+            }
+
+            return TemplateRoot + "/" + name;
+        }
+
+        /// <summary>
+        /// Gets the resource path for a style sheet without file extension.
+        /// </summary>
+        /// <param name="name">The USS filename without extension.</param>
+        public static string Style(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentException("Style name cannot be null or whitespace.", nameof(name));
+            }
+
+            return StyleRoot + "/" + name;
+        }
+
+        /// <summary>
+        /// Gets the resource path for a configuration asset without file extension.
+        /// </summary>
+        /// <param name="name">The asset filename without extension.</param>
+        public static string Config(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentException("Config name cannot be null or whitespace.", nameof(name));
+            }
+
+            return ConfigRoot + "/" + name;
+        }
+    }
+}
+
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Internal\CosmicElementsScreenIds.cs
+==================================================
+
+namespace CreativeFusion.Ui.Styles.CosmicElements
+{
+    /// <summary>
+    /// Provides canonical screen identifiers for the CosmicElements UI theme.
+    /// </summary>
+    public static class CosmicElementsScreenIds
+    {
+        /// <summary>
+        /// Identifier for the main menu screen.
+        /// </summary>
+        public const string MainMenu = "main-menu";
+
+        /// <summary>
+        /// Identifier for the level selection screen (grid layout).
+        /// </summary>
+        public const string LevelSelect = "level-select";
+
+        /// <summary>
+        /// Identifier for the level grid screen.
+        /// </summary>
+        public const string LevelGrid = "level-grid";
+
+        /// <summary>
+        /// Identifier for the level tabs screen.
+        /// </summary>
+        public const string LevelTabs = "level-tabs";
+
+        /// <summary>
+        /// Identifier for the level path screen.
+        /// </summary>
+        public const string LevelPath = "level-path";
+
+        /// <summary>
+        /// Identifier for the shop screen.
+        /// </summary>
+        public const string Shop = "shop";
+
+        /// <summary>
+        /// Identifier for the splash loading screen.
+        /// </summary>
+        public const string SplashLoading = "splash-loading";
+    }
+}
+
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Internal\CosmicElementsScreenUtility.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using CreativeFusion.Ui.Core;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+namespace CreativeFusion.Ui.Styles.CosmicElements.Internal
+{
+    /// <summary>
+    /// Provides helpers for loading and applying themed UI Toolkit assets.
+    /// </summary>
+    public static class CosmicElementsScreenUtility
+    {
+        private static readonly Dictionary<string, VisualTreeAsset> LayoutCache = new(StringComparer.Ordinal);
+        private static readonly Dictionary<string, VisualTreeAsset> TemplateCache = new(StringComparer.Ordinal);
+        private static readonly Dictionary<string, StyleSheet> StyleCache = new(StringComparer.Ordinal);
+
+        /// <summary>
+        /// Replaces the visual content of a screen with the specified layout and styles.
+        /// </summary>
+        /// <param name="screen">The screen to populate.</param>
+        /// <param name="layoutPath">The Resources path of the layout without file extension.</param>
+        /// <param name="styleSheetPaths">Optional style sheet resource paths.</param>
+        public static void ApplyLayout(UIScreen screen, string layoutPath, params string[] styleSheetPaths)
+        {
+            if (screen == null)
+            {
+                throw new ArgumentNullException(nameof(screen));
+            }
+
+            var layout = LoadLayout(layoutPath);
+            screen.Clear();
+            screen.name = layout.name + "-screen";
+            var container = layout.Instantiate();
+            container.name = layout.name + "-container";
+            screen.Add(container);
+            screen.AddToClassList("cosmicelements-screen-root");
+
+            if (styleSheetPaths == null || styleSheetPaths.Length == 0)
+            {
+                return;
+            }
+
+            foreach (var path in styleSheetPaths)
+            {
+                if (string.IsNullOrWhiteSpace(path))
+                {
+                    continue;
+                }
+
+                var styleSheet = LoadStyle(path);
+                if (!screen.styleSheets.Contains(styleSheet))
+                {
+                    screen.styleSheets.Add(styleSheet);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Creates a factory suitable for UI Toolkit list views using a visual template asset.
+        /// </summary>
+        /// <param name="templatePath">The Resources path of the template without file extension.</param>
+        /// <returns>A factory that instantiates the template when invoked.</returns>
+        public static Func<VisualElement> CreateTemplateFactory(string templatePath)
+        {
+            var template = LoadTemplate(templatePath);
+            return () =>
+            {
+                var instance = template.Instantiate();
+                instance.name = template.name + "-item";
+                return instance;
+            };
+        }
+
+        /// <summary>
+        /// Loads a <see cref="VisualTreeAsset"/> representing a screen layout.
+        /// </summary>
+        /// <param name="path">The Resources path without extension.</param>
+        private static VisualTreeAsset LoadLayout(string path)
+        {
+            if (string.IsNullOrWhiteSpace(path))
+            {
+                throw new ArgumentException("Layout path cannot be null or whitespace.", nameof(path));
+            }
+
+            if (!LayoutCache.TryGetValue(path, out var asset))
+            {
+                asset = LoadResource<VisualTreeAsset>(path);
+                LayoutCache[path] = asset;
+            }
+
+            return asset;
+        }
+
+        private static VisualTreeAsset LoadTemplate(string path)
+        {
+            if (string.IsNullOrWhiteSpace(path))
+            {
+                throw new ArgumentException("Template path cannot be null or whitespace.", nameof(path));
+            }
+
+            if (!TemplateCache.TryGetValue(path, out var asset))
+            {
+                asset = LoadResource<VisualTreeAsset>(path);
+                TemplateCache[path] = asset;
+            }
+
+            return asset;
+        }
+
+        private static StyleSheet LoadStyle(string path)
+        {
+            if (string.IsNullOrWhiteSpace(path))
+            {
+                throw new ArgumentException("Style path cannot be null or whitespace.", nameof(path));
+            }
+
+            if (!StyleCache.TryGetValue(path, out var asset))
+            {
+                asset = LoadResource<StyleSheet>(path);
+                StyleCache[path] = asset;
+            }
+
+            return asset;
+        }
+
+        private static T LoadResource<T>(string path)
+            where T : UnityEngine.Object
+        {
+            var asset = UnityEngine.Resources.Load<T>(path);
+            if (asset == null)
+            {
+                throw new InvalidOperationException($"CosmicElements style resource not found at '{path}'.");
+            }
+
+            return asset;
+        }
+    }
+}
+
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Providers\CosmicElementsScreenProvider.cs
+==================================================
+
+using System.Collections.Generic;
+using CreativeFusion.Ui.Core;
+using CreativeFusion.Ui.Styles.CosmicElements.Screens;
+
+namespace CreativeFusion.Ui.Styles.CosmicElements.Providers
+{
+    public sealed class CosmicElementsScreenProvider : IScreenProvider
+    {
+        public IEnumerable<UIScreenConfig> GetConfigs()
+        {
+            yield return UIScreenConfig.For(typeof(CosmicElementsMainMenuScreen), CosmicElementsScreenIds.MainMenu);
+            yield return UIScreenConfig.For(typeof(CosmicElementsLevelGridScreen), CosmicElementsScreenIds.LevelGrid);
+            yield return UIScreenConfig.For(typeof(CosmicElementsLevelPathScreen), CosmicElementsScreenIds.LevelPath);
+            yield return UIScreenConfig.For(typeof(CosmicElementsLevelTabsScreen), CosmicElementsScreenIds.LevelTabs);
+            yield return UIScreenConfig.For(typeof(CosmicElementsShopScreen), CosmicElementsScreenIds.Shop);
+            yield return UIScreenConfig.For(typeof(CosmicElementsSplashLoadingScreen), CosmicElementsScreenIds.SplashLoading);
+        }
+    }
+}
+
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Resources\CosmicElements\Uss\base.uss
+==================================================
+
+.cosmicelements-screen-root,
+.cosmicelements-screen,
+.unity-ui-document__root {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    flex-direction: column;
+    background-color: #0a0e27;
+}
+
+.cosmicelements-screen {
+    outline: 2px solid lime;
+}
+
+
+.cosmicelements-screen { flex-grow: 1; }
+.cosmicelements-frame { flex-grow: 1; }
+#menu-container { flex-grow: 1; }       /* center stack grows */
+.menu-footer { margin-top: auto; }      /* footer sticks to bottom */
+.btn > .unity-button__text,
+.icon-button > .unity-button__text {
+  color: white;
+  -unity-font-style: bold;
+}
+
+.cosmicelements-background {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background-color: #0a0e27;
+}
+
+.cosmicelements-frame {
+    flex-grow: 1;                        /* <— lets content fill remaining space */
+    flex-direction: column;
+    padding-top: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+/* Header */
+.header { flex-direction: column; padding-bottom: 8px; }
+.ce-title-lg { font-size: 24px; -unity-font-style: bold; color: white; }   /* note the leading '-' */
+.ce-subtitle { font-size: 14px; color: rgba(255,255,255,0.75); }
+
+/* Badges */
+.badge {
+    border-radius: 12px;
+    padding-top: 4px; padding-bottom: 4px;
+    padding-left: 8px; padding-right: 8px;
+    font-size: 11px; -unity-font-style: bold;
+    color: white;
+    border-width: 1px; border-color: rgba(255,255,255,0.12);
+    background-color: rgba(255,255,255,0.12);
+}
+.right { margin-left: auto; }
+
+/* Buttons (stack) */
+.btn {
+    flex-direction: row; justify-content: center; align-items: center;
+    min-height: 52px;
+    margin-top: 10px;                    /* spacing between items */
+    padding-top: 12px; padding-bottom: 12px;
+    border-radius: 16px;
+    border-width: 1px; border-color: rgba(255,255,255,0.12);
+    background-color: rgba(255,255,255,0.08);
+}
+.btn--primary { background-color: #667eea; border-width: 0; }
+
+/* Ensure button text is visible (theme-proof) */
+.btn > .unity-button__text {
+    color: white;
+    font-size: 14px;
+    -unity-font-style: bold;
+}
+
+/* Footer pinned to bottom of the frame */
+.menu-footer {
+    flex-direction: row; justify-content: space-between; align-items: center;
+    margin-top: auto;                    /* <— pushes footer down */
+    padding-left: 20px; padding-right: 20px; padding-bottom: 20px;
+}
+
+.icon-button {
+    width: 48px; height: 48px; border-radius: 24px;
+    justify-content: center; align-items: center;
+    border-width: 1px; border-color: rgba(255,255,255,0.10);
+    background-color: rgba(255,255,255,0.10);
+}
+.icon-button.active { background-color: rgba(255,255,255,0.25); }
+.icon-button > .unity-button__text { color: white; -unity-font-style: bold; }
+
+/* Layout helpers */
+.layout-column { flex-direction: column; }
+.layout-row { flex-direction: row; align-items: center; }
+
+/* Let the central button list take remaining space (no UXML edit needed) */
+#menu-container { flex-grow: 1; }
+
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Resources\CosmicElements\Uxml\MainMenu.uxml
+==================================================
+
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML 
+    xmlns:ui="UnityEngine.UIElements" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd">
+
+    <Style src="../../../Resources/CosmicElements/Uss/base.uss" />
+    
+<ui:VisualElement class="cosmicelements-screen layout-column"
+                  style="width: 100%; height: 100%;">
+
+
+        <ui:VisualElement class="cosmicelements-background" />
+
+        <ui:VisualElement class="cosmicelements-frame layout-column" name="menu-frame">
+
+            <!-- Header -->
+            <ui:VisualElement class="header layout-column">
+                <ui:Label class="ce-title-lg" text="Main Hub" />
+                <ui:Label class="ce-subtitle" text="Welcome back, Voyager Aria" />
+            </ui:VisualElement>
+
+            <!-- Status Badges -->
+            <ui:VisualElement class="layout-row">
+                <ui:Label class="badge" text="Lv 18" />
+                <ui:Label class="badge" text="120 / 150 Energy" />
+                <ui:Label class="badge right" text="Event: Prism Rift" />
+            </ui:VisualElement>
+
+            <!-- Buttons -->
+            <ui:VisualElement class="layout-column" name="menu-container">
+                <ui:Button name="continue-button" class="btn btn--primary" text="Continue: Crystal Caverns" />
+                <ui:Button name="start-button" class="btn btn--primary" text="Level Select" />
+                <ui:Button name="modes-button" class="btn" text="Game Modes" />
+                <ui:Button name="leaderboards-button" class="btn" text="Leaderboards" />
+                <ui:Button name="marketplace-button" class="btn" text="Marketplace" />
+                <ui:Button name="achievements-button" class="btn" text="Achievements" />
+            </ui:VisualElement>
+
+            <!-- Footer -->
+            <ui:VisualElement class="menu-footer layout-row">
+                <ui:Button name="audio-button" class="icon-button active" text="&#x1F50A;" /> 
+                <ui:Button name="vibration-button" class="icon-button" text="&#x1F4F3;" />
+                <ui:Button name="settings-button" class="icon-button" text="&#9881;" /> 
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
+
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Screens\CosmicElementsDynamicMenuScreen.cs
+==================================================
+
+using CreativeFusion.Ui.Screens.Screens;
+using CreativeFusion.Ui.Styles.CosmicElements.Internal;
+
+namespace CreativeFusion.Ui.Styles.CosmicElements
+{
+    public abstract class CosmicElementsDynamicMenuScreen : DynamicMenuScreen
+    {
+        protected override string GetDefaultLayoutPath()
+            => CosmicElementsResourcePaths.Layout("MainMenu"); // or overridden per-screen
+
+        protected override string[] GetDefaultStylePaths()
+            => new[] { CosmicElementsResourcePaths.Style("base") };
+    }
+}
+
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Screens\CosmicElementsLevelGridScreen.cs
+==================================================
+
+using CreativeFusion.Ui.Core;
+using CreativeFusion.Ui.Styles.CosmicElements.Internal;
+
+
+namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
+{
+[UIScreen(CosmicElementsScreenIds.LevelGrid)]
+public class CosmicElementsLevelGridScreen : UIScreen
+{
+private static readonly string[] StylePaths =
+{
+CosmicElementsResourcePaths.Style("base"),
+CosmicElementsResourcePaths.Style("level-grid"),
+};
+
+
+protected override void OnInitialize()
+{
+CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("LevelGrid"), StylePaths);
+}
+}
+}
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Screens\CosmicElementsLevelPathScreen.cs
+==================================================
+
+using CreativeFusion.Ui.Core;
+using CreativeFusion.Ui.Styles.CosmicElements.Internal;
+
+
+namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
+{
+[UIScreen(CosmicElementsScreenIds.LevelPath)]
+public class CosmicElementsLevelPathScreen : UIScreen
+{
+private static readonly string[] StylePaths =
+{
+CosmicElementsResourcePaths.Style("base"),
+CosmicElementsResourcePaths.Style("level-path"),
+};
+
+
+protected override void OnInitialize()
+{
+CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("LevelPath"), StylePaths);
+}
+}
+}
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Screens\CosmicElementsLevelTabsScreen.cs
+==================================================
+
+
+
+using CreativeFusion.Ui.Core;
+using CreativeFusion.Ui.Styles.CosmicElements.Internal;
+
+
+namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
+{
+[UIScreen(CosmicElementsScreenIds.LevelTabs)]
+public class CosmicElementsLevelTabsScreen : UIScreen
+{
+private static readonly string[] StylePaths =
+{
+CosmicElementsResourcePaths.Style("base"),
+CosmicElementsResourcePaths.Style("level-tabs"),
+};
+
+
+protected override void OnInitialize()
+{
+CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("LevelTabs"), StylePaths);
+}
+}
+}
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Screens\CosmicElementsMainMenuScreen.cs
+==================================================
+
+using CreativeFusion.Ui.Core;
+using CreativeFusion.Ui.Styles.CosmicElements.Internal;
+
+
+namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
+{
+[UIScreen(CosmicElementsScreenIds.MainMenu)]
+public class CosmicElementsMainMenuScreen : UIScreen
+{
+private static readonly string[] StylePaths =
+{
+       CosmicElementsResourcePaths.Style("base"),
+};
+
+
+protected override void OnInitialize()
+{
+CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("MainMenu"), StylePaths);
+}
+}
+}
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Screens\CosmicElementsShopScreen.cs
+==================================================
+
+
+
+using CreativeFusion.Ui.Core;
+using CreativeFusion.Ui.Styles.CosmicElements.Internal;
+using UnityEngine.UIElements;
+
+
+namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
+{
+[UIScreen(CosmicElementsScreenIds.Shop)]
+public class CosmicElementsShopScreen : UIScreen
+{
+private static readonly string[] StylePaths =
+{
+CosmicElementsResourcePaths.Style("base"),
+CosmicElementsResourcePaths.Style("shop"),
+};
+
+
+protected override void OnInitialize()
+{
+CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("Shop"), StylePaths);
+}
+}
+}
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\Screens\CosmicElementsSplashLoadingScreen.cs
+==================================================
+
+using CreativeFusion.Ui.Core;
+using CreativeFusion.Ui.Styles.CosmicElements.Internal;
+
+
+namespace CreativeFusion.Ui.Styles.CosmicElements.Screens
+{
+[UIScreen(CosmicElementsScreenIds.SplashLoading)]
+public class CosmicElementsSplashLoadingScreen : UIScreen
+{
+private static readonly string[] StylePaths =
+{
+CosmicElementsResourcePaths.Style("base"),
+CosmicElementsResourcePaths.Style("splash-loading"),
+};
+
+
+protected override void OnInitialize()
+{
+CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("SplashLoading"), StylePaths);
+}
+}
+}
+==================================================
+File: D:\CreativeFusion\Packages\com.creativefusion.ui.styles.cosmicelements\Runtime\CosmicElementsStyle.cs
+==================================================
+
+#nullable enable
+using System;
+using CreativeFusion.Ui.Core;
+using CreativeFusion.Ui.Styles.CosmicElements.Internal;
+using CreativeFusion.Ui.Styles.CosmicElements.Resources;
+using UnityEngine;
+
+namespace CreativeFusion.Ui.Styles.CosmicElements
+{
+    /// <summary>
+    /// Provides runtime helpers for accessing CosmicElements style assets.
+    /// </summary>
+    public static class CosmicElementsStyle
+    {
+        private static UIScreenConfigSet? _cachedConfig;
+
+        /// <summary>
+        /// Loads the CosmicElements <see cref="UIScreenConfigSet"/> from Resources and caches the result.
+        /// </summary>
+        /// <returns>The configured <see cref="UIScreenConfigSet"/> for this style pack.</returns>
+        public static UIScreenConfigSet GetConfigSet()
+        {
+            if (_cachedConfig != null)
+            {
+                return _cachedConfig;
+            }
+
+            var asset = UnityEngine.Resources.Load<CosmicElementsUIScreenConfigSetAsset>(CosmicElementsResourcePaths.Config("CosmicElementsUIScreenConfigSet"));
+            if (asset == null)
+            {
+                throw new InvalidOperationException("CosmicElements UIScreenConfigSet asset could not be located in Resources.");
+            }
+
+            _cachedConfig = asset.Build();
+            return _cachedConfig;
+        }
+
+        /// <summary>
+        /// Clears cached resources so that a fresh instance can be created.
+        /// </summary>
+        public static void ResetCache()
+        {
+            _cachedConfig = null;
+        }
+    }
+}
+

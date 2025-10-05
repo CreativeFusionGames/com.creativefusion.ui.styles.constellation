@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Organisms/LevelGrid.uxml" name="Grid" />
+  <ui:Template src="../Atoms/StarsRow.uxml" name="Stars" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="Level Select — Grid" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Choose any unlocked stage" /></ui:Instance>
+    <ui:VisualElement class="content">
+      <ui:Instance template="Grid">
+        <ui:VisualElement class="card centered vstack"><ui:Label class="title-lg" text="1" /><ui:Instance template="Stars" /></ui:VisualElement>
+        <ui:VisualElement class="card centered vstack"><ui:Label class="title-lg" text="2" /><ui:Instance template="Stars" /></ui:VisualElement>
+        <ui:VisualElement class="card centered vstack"><ui:Label class="title-lg" text="3" /><ui:Instance template="Stars" /></ui:VisualElement>
+        <ui:VisualElement class="card centered vstack"><ui:Label class="title-lg" text="4" /><ui:Instance template="Stars" /></ui:VisualElement>
+        <ui:VisualElement class="card centered vstack"><ui:Label class="title-lg" text="5" /><ui:Instance template="Stars" /></ui:VisualElement>
+        <ui:VisualElement class="card centered vstack"><ui:Label class="title-lg" text="6" /><ui:Instance template="Stars" /></ui:VisualElement>
+        <ui:VisualElement class="card centered vstack"><ui:Label class="subtitle" text="Locked" /></ui:VisualElement>
+        <ui:VisualElement class="card centered vstack"><ui:Label class="subtitle" text="Locked" /></ui:VisualElement>
+        <ui:VisualElement class="card centered vstack"><ui:Label class="subtitle" text="Locked" /></ui:VisualElement>
+      </ui:Instance>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="panel hstack" name="ListRowWithAction">
+    <ui:VisualElement class="hstack">
+      <ui:Label name="Icon" class="icon" text="" />
+      <ui:VisualElement>
+        <ui:Label name="Title" text="Title" />
+        <ui:Label name="Subtitle" class="subtitle" text="Subtitle" />
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement class="hstack">
+      <ui:Label class="badge" name="Badge" text="Tag" />
+      <ui:Button class="btn btn--small" name="ActionBtn">
+        <ui:Label name="ActionText" text="Action" />
+      </ui:Button>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

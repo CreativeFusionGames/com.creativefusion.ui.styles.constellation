@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Molecules/TabBar.uxml" name="Tabs" />
+  <ui:Template src="../Organisms/LeaderboardRow.uxml" name="Row" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="Leaderboards" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Global and seasonal rankings" /></ui:Instance>
+    <ui:VisualElement class="content">
+      <ui:Instance template="Tabs" />
+      <ui:VisualElement class="vstack" style="margin-top:10px;">
+        <ui:Instance template="Row"><ui:AttributeOverride element-name="Title" attribute-name="text" value="#1 Player001" /><ui:AttributeOverride element-name="Score" attribute-name="text" value="99,763" /></ui:Instance>
+        <ui:Instance template="Row"><ui:AttributeOverride element-name="Title" attribute-name="text" value="#2 Player002" /><ui:AttributeOverride element-name="Score" attribute-name="text" value="99,526" /></ui:Instance>
+        <ui:Instance template="Row"><ui:AttributeOverride element-name="Title" attribute-name="text" value="#3 Player003" /><ui:AttributeOverride element-name="Score" attribute-name="text" value="99,289" /></ui:Instance>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

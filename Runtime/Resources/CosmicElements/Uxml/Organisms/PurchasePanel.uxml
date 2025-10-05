@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="panel vstack" name="PurchasePanel">
+    <ui:VisualElement class="hstack" style="justify-content: space-between;">
+      <ui:VisualElement>
+        <ui:Label name="ItemTitle" text="Prism Deluxe Pack" />
+        <ui:Label class="subtitle" name="ItemSubtitle" text="1,200 Gems + 4,000 Shards + Aura Frame" />
+      </ui:VisualElement>
+      <ui:Label class="badge" name="Discount" text="-40%" />
+    </ui:VisualElement>
+    <ui:VisualElement class="sep" />
+    <ui:VisualElement class="hstack" style="justify-content: space-between;">
+      <ui:Label class="kicker" text="Total" />
+      <ui:Label class="title-lg" name="Total" text="£8.99" />
+    </ui:VisualElement>
+    <ui:VisualElement class="hstack centered">
+      <ui:Button class="btn btn--primary" name="Confirm"><ui:Label text="Confirm Purchase" /></ui:Button>
+      <ui:Button class="btn" name="Cancel"><ui:Label text="Cancel" /></ui:Button>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

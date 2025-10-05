@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Organisms/DailyRewardItem.uxml" name="Item" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header">
+      <ui:AttributeOverride element-name="Title" attribute-name="text" value="Daily Rewards" />
+      <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Log in to claim streak bonuses" />
+    </ui:Instance>
+    <ui:VisualElement class="content">
+      <ui:VisualElement class="grid-3">
+        <ui:Instance template="Item"><ui:AttributeOverride element-name="Day" attribute-name="text" value="Day 1" /><ui:AttributeOverride element-name="RewardText" attribute-name="text" value="Energy +30" /><ui:AttributeOverride element-name="ClaimBtn" attribute-name="class" value="btn btn--small" /></ui:Instance>
+        <ui:Instance template="Item"><ui:AttributeOverride element-name="Day" attribute-name="text" value="Day 2" /><ui:AttributeOverride element-name="RewardText" attribute-name="text" value="Gem +10" /><ui:AttributeOverride element-name="ClaimBtn" attribute-name="class" value="btn btn--small" /></ui:Instance>
+        <ui:Instance template="Item"><ui:AttributeOverride element-name="Day" attribute-name="text" value="Day 3" /><ui:AttributeOverride element-name="RewardText" attribute-name="text" value="Key x1" /><ui:AttributeOverride element-name="ClaimBtn" attribute-name="class" value="btn btn--small btn--primary" /></ui:Instance>
+        <ui:Instance template="Item"><ui:AttributeOverride element-name="Day" attribute-name="text" value="Day 4" /><ui:AttributeOverride element-name="RewardText" attribute-name="text" value="Mod Chip" /><ui:AttributeOverride element-name="ClaimBtn" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="ClaimBtn" attribute-name="text" value="Locked" /></ui:Instance>
+        <ui:Instance template="Item"><ui:AttributeOverride element-name="Day" attribute-name="text" value="Day 5" /><ui:AttributeOverride element-name="RewardText" attribute-name="text" value="Cosmetic" /><ui:AttributeOverride element-name="ClaimBtn" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="ClaimBtn" attribute-name="text" value="Locked" /></ui:Instance>
+        <ui:Instance template="Item"><ui:AttributeOverride element-name="Day" attribute-name="text" value="Day 6" /><ui:AttributeOverride element-name="RewardText" attribute-name="text" value="Epic Chest" /><ui:AttributeOverride element-name="ClaimBtn" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="ClaimBtn" attribute-name="text" value="Locked" /></ui:Instance>
+        <ui:Instance template="Item"><ui:AttributeOverride element-name="Day" attribute-name="text" value="Day 7" /><ui:AttributeOverride element-name="RewardText" attribute-name="text" value="Shards +50" /><ui:AttributeOverride element-name="ClaimBtn" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="ClaimBtn" attribute-name="text" value="Locked" /></ui:Instance>
+      </ui:VisualElement>
+      <ui:Label class="subtitle" style="margin-top:8px; text-align:center;" text="Maintain your streak to upgrade rewards." />
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

@@ -9,7 +9,7 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Internal
     /// <summary>
     /// Provides helpers for loading and applying themed UI Toolkit assets.
     /// </summary>
-    internal static class CosmicElementsScreenUtility
+    public static class CosmicElementsScreenUtility
     {
         private static readonly Dictionary<string, VisualTreeAsset> LayoutCache = new(StringComparer.Ordinal);
         private static readonly Dictionary<string, VisualTreeAsset> TemplateCache = new(StringComparer.Ordinal);
@@ -31,9 +31,22 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Internal
             var layout = LoadLayout(layoutPath);
             screen.Clear();
             screen.name = layout.name + "-screen";
-            var container = layout.Instantiate();
-            container.name = layout.name + "-container";
-            screen.Add(container);
+
+
+// CosmicElementsScreenUtility.ApplyLayout(...)
+screen.style.flexGrow = 1f;
+screen.style.width  = Length.Percent(100);
+screen.style.height = Length.Percent(100);
+
+var container = layout.Instantiate();
+container.name = layout.name + "-container";
+container.style.flexGrow = 1f;
+container.style.width  = Length.Percent(100);
+container.style.height = Length.Percent(100);
+
+screen.Add(container);
+
+
             screen.AddToClassList("cosmicelements-screen-root");
 
             if (styleSheetPaths == null || styleSheetPaths.Length == 0)
@@ -49,9 +62,16 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Internal
                 }
 
                 var styleSheet = LoadStyle(path);
+
+
+
                 if (!screen.styleSheets.Contains(styleSheet))
                 {
                     screen.styleSheets.Add(styleSheet);
+                }
+                else {
+                    Debug.LogWarning($"[CosmicElements] Style not found at '{path}'. Skipping.");
+
                 }
             }
         }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="hud" name="Hud">
+    <ui:VisualElement class="hud-top">
+      <ui:VisualElement class="hud-chip hstack"><ui:Label text="♥ 120" /></ui:VisualElement>
+      <ui:VisualElement class="hud-chip hstack"><ui:Label text="⏱ 03:12" /></ui:VisualElement>
+      <ui:VisualElement class="hud-chip hstack"><ui:Label text="🗺 Crystal Caverns" /></ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement class="hud-bottom">
+      <ui:VisualElement class="hud-chip hstack"><ui:Label text="🎯 Objective: Reach the Core" /></ui:VisualElement>
+      <ui:VisualElement class="hud-chip hstack"><ui:Label text="✨ x12 Combo" /></ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

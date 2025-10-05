@@ -1,0 +1,8 @@
+/* Cosmic Elements — pages.uss
+   Put page-specific tweaks here if needed.
+   Currently empty; kept as a placeholder for consistency.
+*/
+
+/* Example tweaks (uncomment as needed):
+.header .subtitle { max-width: 85%; }
+*/

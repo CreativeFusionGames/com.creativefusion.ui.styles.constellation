@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="panel vstack" name="AchievementItem">
+    <ui:Label name="Title" text="Achievement" />
+    <ui:Label name="Subtitle" class="subtitle" text="Description" />
+    <ui:ProgressBar name="Progress" class="progress" value="0" highValue="100" />
+  </ui:VisualElement>
+</ui:UXML>

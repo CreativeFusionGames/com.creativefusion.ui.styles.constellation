@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="header">
+    <ui:Label name="Title" class="title-lg" text="Title" />
+    <ui:Label name="Subtitle" class="subtitle" text="Subtitle" />
+  </ui:VisualElement>
+</ui:UXML>

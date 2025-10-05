@@ -15,7 +15,7 @@ private static readonly string[] StylePaths =
 
 protected override void OnInitialize()
 {
-CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("MainMenu"), StylePaths);
+CosmicElementsScreenUtility.ApplyLayout(this, CosmicElementsResourcePaths.Layout("Pages/MainMenu"), StylePaths);
 }
 }
 }

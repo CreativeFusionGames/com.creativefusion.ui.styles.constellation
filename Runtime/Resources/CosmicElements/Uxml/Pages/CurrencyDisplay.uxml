@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Molecules/KeyValueRow.uxml" name="KVR" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header">
+      <ui:AttributeOverride element-name="Title" attribute-name="text" value="Wallet" />
+      <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Your currencies at a glance" />
+    </ui:Instance>
+    <ui:VisualElement class="content vstack">
+      <ui:Instance template="KVR">
+        <ui:AttributeOverride element-name="Title" attribute-name="text" value="Gems" />
+        <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Premium currency" />
+        <ui:AttributeOverride element-name="Value" attribute-name="text" value="1,420" />
+      </ui:Instance>
+      <ui:Instance template="KVR">
+        <ui:AttributeOverride element-name="Title" attribute-name="text" value="Shards" />
+        <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Core progression" />
+        <ui:AttributeOverride element-name="Value" attribute-name="text" value="32,410" />
+      </ui:Instance>
+      <ui:Instance template="KVR">
+        <ui:AttributeOverride element-name="Title" attribute-name="text" value="Tokens" />
+        <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Event-only" />
+        <ui:AttributeOverride element-name="Value" attribute-name="text" value="18" />
+      </ui:Instance>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

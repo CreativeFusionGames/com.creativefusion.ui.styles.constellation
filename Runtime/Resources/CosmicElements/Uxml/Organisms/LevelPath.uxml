@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement name="LevelPath" style="position: relative; flex-grow:1; align-items: center;">
+    <ui:VisualElement class="path-line" />
+    <!-- Stack nodes vertically -->
+    <ui:VisualElement class="vstack" style="align-items: center; padding-top: 10px;">
+      <ui:Label class="level-node completed" text="1" />
+      <ui:Label class="level-node completed" text="2" />
+      <ui:Label class="level-node completed" text="3" />
+      <ui:Label class="level-node completed" text="4" />
+      <ui:Label class="level-node current" text="5" />
+      <ui:Label class="level-node locked" text="" />
+      <ui:Label class="level-node locked" text="" />
+      <ui:Label class="level-node locked" text="" />
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

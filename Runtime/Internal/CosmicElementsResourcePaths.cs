@@ -5,7 +5,7 @@ namespace CreativeFusion.Ui.Styles.CosmicElements.Internal
     /// <summary>
     /// Centralizes resource path construction for the CosmicElements UI theme.
     /// </summary>
-    internal static class CosmicElementsResourcePaths
+    public static class CosmicElementsResourcePaths
     {
         private const string Root = "CosmicElements";
         private const string LayoutRoot = Root + "/Uxml";

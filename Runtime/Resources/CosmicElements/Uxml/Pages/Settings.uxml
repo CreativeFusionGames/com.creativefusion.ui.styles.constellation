@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Atoms/Button.uxml" name="Btn" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="Settings" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Adjust your experience" /></ui:Instance>
+    <ui:VisualElement class="content vstack">
+      <ui:VisualElement class="panel hstack" style="justify-content:space-between;"><ui:Label text="🔊 Audio" /><ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="On" /></ui:Instance></ui:VisualElement>
+      <ui:VisualElement class="panel hstack" style="justify-content:space-between;"><ui:Label text="📳 Vibration" /><ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Off" /></ui:Instance></ui:VisualElement>
+      <ui:VisualElement class="panel hstack" style="justify-content:space-between;"><ui:Label text="🎚 Graphics" /><ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="High" /></ui:Instance></ui:VisualElement>
+      <ui:VisualElement class="panel hstack" style="justify-content:space-between;"><ui:Label text="🌐 Language" /><ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="English" /></ui:Instance></ui:VisualElement>
+      <ui:VisualElement class="panel hstack" style="justify-content:space-between;"><ui:Label text="♿ Accessibility" /><ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Open" /></ui:Instance></ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

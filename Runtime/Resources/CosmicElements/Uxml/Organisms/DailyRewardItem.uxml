@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="card centered vstack" name="DailyRewardItem">
+    <ui:Label class="kicker" name="Day" text="Day 1" />
+    <ui:Label name="Icon" class="icon" text="" />
+    <ui:Label class="subtitle" name="RewardText" text="Reward" />
+    <ui:Button class="btn btn--small btn--primary" name="ClaimBtn"><ui:Label text="Claim" /></ui:Button>
+  </ui:VisualElement>
+</ui:UXML>

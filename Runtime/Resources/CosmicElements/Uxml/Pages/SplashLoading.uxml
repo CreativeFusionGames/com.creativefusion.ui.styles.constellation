@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="AETHER — Loading" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Preparing your journey through dimensions…" /></ui:Instance>
+    <ui:VisualElement class="content centered vstack">
+      <ui:Label class="title-xl" text="AETHER" />
+      <ui:Label class="subtitle" text="Journey Through Dimensions" />
+      <ui:VisualElement class="panel vstack" style="padding:20px; width:85%;">
+        <ui:VisualElement class="hstack" style="justify-content:space-between;">
+          <ui:Label class="kicker" text="Initializing Assets" />
+          <ui:Label class="kicker" text="72%" />
+        </ui:VisualElement>
+        <ui:ProgressBar class="progress" value="72" highValue="100" />
+        <ui:Label class="subtitle" style="margin-top:10px;" text="Tip: Chain combos to multiply your shard gains." />
+      </ui:VisualElement>
+      <ui:Label class="kicker" text="Syncing profile..." />
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

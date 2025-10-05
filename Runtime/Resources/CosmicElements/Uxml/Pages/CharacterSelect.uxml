@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Atoms/Button.uxml" name="Btn" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header">
+      <ui:AttributeOverride element-name="Title" attribute-name="text" value="Character Select" />
+      <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Choose your avatar &amp; style" />
+    </ui:Instance>
+    <ui:VisualElement class="content">
+      <ui:VisualElement class="grid-3">
+        <ui:VisualElement class="card centered vstack">
+          <ui:Label class="title-lg" text="Aria" />
+          <ui:Label class="subtitle" text="Balanced explorer" />
+          <ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small btn--primary" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Select" /></ui:Instance>
+        </ui:VisualElement>
+        <ui:VisualElement class="card centered vstack">
+          <ui:Label class="title-lg" text="Kael" />
+          <ui:Label class="subtitle" text="Aggressive striker" />
+          <ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Unlock 1,000 Shards" /></ui:Instance>
+        </ui:VisualElement>
+        <ui:VisualElement class="card centered vstack">
+          <ui:Label class="title-lg" text="Nyx" />
+          <ui:Label class="subtitle" text="Stealthy trickster" />
+          <ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Unlock via Quest" /></ui:Instance>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="section">
+        <ui:Label class="title-lg" text="Skins" />
+        <ui:VisualElement class="grid-3" style="margin-top:10px;">
+          <ui:VisualElement class="card centered hstack"><ui:Label text="🎨 Aurora Attire" /><ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Equip" /></ui:Instance></ui:VisualElement>
+          <ui:VisualElement class="card centered hstack"><ui:Label text=" flare  Solar Weave" /><ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Equip" /></ui:Instance></ui:VisualElement>
+          <ui:VisualElement class="card centered hstack"><ui:Label text="❄  Frost Circuit" /><ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Equip" /></ui:Instance></ui:VisualElement>
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

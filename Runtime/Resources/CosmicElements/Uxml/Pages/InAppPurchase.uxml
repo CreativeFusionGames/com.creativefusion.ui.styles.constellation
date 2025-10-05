@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Organisms/PurchasePanel.uxml" name="PurchasePanel" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="Purchase" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Confirm your order" /></ui:Instance>
+    <ui:VisualElement class="content"><ui:Instance template="PurchasePanel" /></ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

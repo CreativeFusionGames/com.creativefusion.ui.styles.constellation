@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="panel hstack" name="QuestItem">
+    <ui:VisualElement class="hstack">
+      <ui:Label class="icon" name="Icon" />
+      <ui:VisualElement>
+        <ui:Label name="Title" text="Quest Title" />
+        <ui:Label class="subtitle" name="ProgressText" text="Progress: 0/1" />
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement class="hstack">
+      <ui:Label class="badge" name="Reward" text="+100" />
+      <ui:Button class="btn btn--small" name="TrackBtn"><ui:Label text="Track" /></ui:Button>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

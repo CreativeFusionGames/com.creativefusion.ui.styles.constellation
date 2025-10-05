@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Atoms/Button.uxml" name="Btn" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="Mailbox" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Rewards, updates, and announcements" /></ui:Instance>
+    <ui:VisualElement class="content vstack">
+      <ui:VisualElement class="panel vstack">
+        <ui:VisualElement class="hstack" style="justify-content:space-between;"><ui:Label text="Season Rewards" /><ui:Label class="kicker" text="2h ago" /></ui:VisualElement>
+        <ui:Label class="subtitle" text="You placed Top 5% — claim 500 Shards." />
+        <ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small btn--primary" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Claim" /></ui:Instance>
+      </ui:VisualElement>
+      <ui:VisualElement class="panel vstack">
+        <ui:VisualElement class="hstack" style="justify-content:space-between;"><ui:Label text="Patch 1.2.0" /><ui:Label class="kicker" text="Yesterday" /></ui:VisualElement>
+        <ui:Label class="subtitle" text="New event: Prism Rift, balance adjustments, bug fixes." />
+        <ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Read" /></ui:Instance>
+      </ui:VisualElement>
+      <ui:VisualElement class="panel vstack">
+        <ui:VisualElement class="hstack" style="justify-content:space-between;"><ui:Label text="Friend Request: Mira" /><ui:Label class="kicker" text="3d ago" /></ui:VisualElement>
+        <ui:VisualElement class="hstack">
+          <ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small btn--primary" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Accept" /></ui:Instance>
+          <ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Ignore" /></ui:Instance>
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

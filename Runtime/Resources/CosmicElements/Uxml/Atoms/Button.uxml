@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Button name="Button" class="btn">
+    <ui:VisualElement class="hstack">
+      <ui:Label name="Icon" class="icon" text="" />
+      <ui:Label name="Text" text="Button" />
+    </ui:VisualElement>
+  </ui:Button>
+</ui:UXML>

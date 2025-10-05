@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="grid-2" name="ProfileStatsGrid">
+    <ui:VisualElement class="card">
+      <ui:Label class="kicker" text="Win Rate" />
+      <ui:Label class="title-lg" text="63%" />
+    </ui:VisualElement>
+    <ui:VisualElement class="card">
+      <ui:Label class="kicker" text="Highest Combo" />
+      <ui:Label class="title-lg" text="x28" />
+    </ui:VisualElement>
+    <ui:VisualElement class="card">
+      <ui:Label class="kicker" text="Total Shards" />
+      <ui:Label class="title-lg" text="32,410" />
+    </ui:VisualElement>
+    <ui:VisualElement class="card">
+      <ui:Label class="kicker" text="Badges" />
+      <ui:Label class="title-lg" text="18" />
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

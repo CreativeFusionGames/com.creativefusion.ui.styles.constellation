@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Atoms/Button.uxml" name="Btn" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header">
+      <ui:AttributeOverride element-name="Title" attribute-name="text" value="Season Pass — Prism Rift" />
+      <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Ends in 13d 04h" />
+    </ui:Instance>
+    <ui:VisualElement class="content">
+      <ui:VisualElement class="panel vstack">
+        <ui:VisualElement class="hstack" style="justify-content:space-between;">
+          <ui:VisualElement class="hstack">
+            <ui:Label class="kicker" text="Tier 12" />
+            <ui:VisualElement style="width:8px" />
+            <ui:VisualElement>
+              <ui:Label class="subtitle" text="Complete daily quests to unlock tiers" />
+            </ui:VisualElement>
+          </ui:VisualElement>
+          <ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small btn--primary" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Upgrade" /></ui:Instance>
+        </ui:VisualElement>
+        <ui:ProgressBar class="progress" value="55" highValue="100" />
+        <ui:VisualElement class="grid-3">
+          <ui:VisualElement class="card centered"><ui:Label text="◆ 120 Gems" /></ui:VisualElement>
+          <ui:VisualElement class="card centered"><ui:Label text="🎨 Skin: Neon Veil" /></ui:VisualElement>
+          <ui:VisualElement class="card centered"><ui:Label text="🛡 Emblem: Riftguard" /></ui:VisualElement>
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

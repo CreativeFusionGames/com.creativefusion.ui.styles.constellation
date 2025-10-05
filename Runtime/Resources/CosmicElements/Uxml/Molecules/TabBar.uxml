@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement class="tabs" name="TabBar">
+    <ui:Toggle class="tab" name="Global" text="Global" value="true" />
+    <ui:Toggle class="tab" name="Seasonal" text="Seasonal" />
+    <ui:Toggle class="tab" name="Friends" text="Friends" />
+  </ui:VisualElement>
+</ui:UXML>

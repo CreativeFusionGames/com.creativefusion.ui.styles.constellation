@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header"><ui:AttributeOverride element-name="Title" attribute-name="text" value="Patch Notes 1.2.0" /><ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Highlights and fixes" /></ui:Instance>
+    <ui:VisualElement class="content">
+      <ui:VisualElement class="panel vstack">
+        <ui:Label text="New" />
+        <ui:VisualElement class="vstack" style="margin-left:12px;">
+          <ui:Label class="subtitle" text="• Event: Prism Rift with unique modifiers." />
+          <ui:Label class="subtitle" text="• Added co-op matchmaking improvements." />
+        </ui:VisualElement>
+        <ui:Label text="Balance" />
+        <ui:VisualElement class="vstack" style="margin-left:12px;">
+          <ui:Label class="subtitle" text="• Crystal Warden HP -8%." />
+          <ui:Label class="subtitle" text="• Shard gain from combos +10%." />
+        </ui:VisualElement>
+        <ui:Label text="Fixes" />
+        <ui:VisualElement class="vstack" style="margin-left:12px;">
+          <ui:Label class="subtitle" text="• Resolved rare crash on level transition." />
+          <ui:Label class="subtitle" text="• UI polish across multiple screens." />
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

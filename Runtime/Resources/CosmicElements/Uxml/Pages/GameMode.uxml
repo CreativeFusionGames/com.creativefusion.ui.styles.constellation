@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Template src="../Molecules/HeaderBar.uxml" name="Header" />
+  <ui:Template src="../Atoms/Button.uxml" name="Btn" />
+  <ui:VisualElement class="screen">
+    <ui:Instance template="Header">
+      <ui:AttributeOverride element-name="Title" attribute-name="text" value="Select Mode" />
+      <ui:AttributeOverride element-name="Subtitle" attribute-name="text" value="Choose your path" />
+    </ui:Instance>
+    <ui:VisualElement class="content vstack">
+      <ui:VisualElement class="card">
+        <ui:VisualElement class="hstack" style="justify-content:space-between;">
+          <ui:VisualElement class="hstack"><ui:Label text="👤" /><ui:VisualElement><ui:Label text="Solo Campaign" /><ui:Label class="subtitle" text="Story-driven chapters &amp; boss fights" /></ui:VisualElement></ui:VisualElement>
+          <ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small btn--primary" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Enter" /></ui:Instance>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="card">
+        <ui:VisualElement class="hstack" style="justify-content:space-between;">
+          <ui:VisualElement class="hstack"><ui:Label text="👥" /><ui:VisualElement><ui:Label text="Co-op Rifts" /><ui:Label class="subtitle" text="Team up for high-score raids" /></ui:VisualElement></ui:VisualElement>
+          <ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="Matchmake" /></ui:Instance>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="card">
+        <ui:VisualElement class="hstack" style="justify-content:space-between;">
+          <ui:VisualElement class="hstack"><ui:Label text="🔥" /><ui:VisualElement><ui:Label text="Events" /><ui:Label class="subtitle" text="Limited-time challenges &amp; rewards" /></ui:VisualElement></ui:VisualElement>
+          <ui:Instance template="Btn"><ui:AttributeOverride element-name="Button" attribute-name="class" value="btn btn--small" /><ui:AttributeOverride element-name="Text" attribute-name="text" value="View" /></ui:Instance>
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>
