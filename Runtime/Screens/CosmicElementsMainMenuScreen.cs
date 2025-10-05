@@ -9,8 +9,7 @@ public class CosmicElementsMainMenuScreen : UIScreen
 {
 private static readonly string[] StylePaths =
 {
-CosmicElementsResourcePaths.Style("base"),
-CosmicElementsResourcePaths.Style("main-menu"),
+       CosmicElementsResourcePaths.Style("base"),
 };
 
 

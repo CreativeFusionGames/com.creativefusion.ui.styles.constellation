@@ -1,5 +1,0 @@
-
-
-/* Main menu layout refinements */
-#menu-frame { max-width: 720px; }
-#menu-frame .btn { width: 100%; }
